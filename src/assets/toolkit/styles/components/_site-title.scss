@@ -3,7 +3,7 @@
   float: left;
   font-family: $font-sans;
   line-height: 1.25;
-  margin-right: $column-pad;
+  margin-right: $gutter;
 
   @media (min-width: $screen-sm-min) {
     display: block;

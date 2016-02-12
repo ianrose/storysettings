@@ -1,0 +1,32 @@
+.column--1x,
+.column--2x {
+
+  figcaption {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+}
+
+.column--1x {
+  max-width: $column-width;
+}
+
+.column--2x {
+  max-width: $column-width * 2;
+}
+
+.column--half {
+  @media (min-width: $screen-xs-min) {
+    width: 50%;
+  }
+
+  figure,
+  aside {
+    margin-left: $gutter;
+    margin-right: $gutter;
+
+    @media (min-width: $screen-xs-min) {
+      max-width: ($column-width / 2) - $gutter;
+    }
+  }
+}

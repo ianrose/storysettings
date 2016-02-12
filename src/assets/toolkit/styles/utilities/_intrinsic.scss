@@ -1,8 +1,4 @@
-.align-center {
-  text-align: center;
-}
-
-.intrinsic-wrapper {
+.intrinsic {
   /*
     This element must maintain position: relative.
     The padding-bottom creates the proper ratio.
@@ -19,7 +15,7 @@
 
 }
 
-.intrinsic-wrapper__element {
+.intrinsic__element {
   /*
     This class needs no further customization,
     if this class is applied to the elemtent and is contained
@@ -32,19 +28,4 @@
   position: absolute;
   top: 0;
   width: 100%;
-}
-
-@include generateRatios(16, 9);
-
-.animated[data-animated^='fade'] {
-  opacity: 0;
-}
-
-.is-hidden {
-  display: none;
-}
-
-%pos-vert-center {
-  top: 50%;
-  transform: translateY(-50%);
 }

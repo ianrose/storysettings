@@ -14,25 +14,18 @@ body {
   font-variant-ligatures: common-ligatures;
 }
 
-// .wf-loading {
-//   h1,
-//   h2,
-//   h3,
-//   h4,
-//   h5,
-//   h6,
-//   p,
-//   blockquote {
-//     visibility: hidden;
-//   }
-// }
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: $font-headline;
   font-weight: 900;
   margin-top: 0;
@@ -172,8 +165,8 @@ blockquote {
     font-family: $font-sans;
     font-style: normal;
     font-weight: 400;
-    padding-left: $column-pad;
-    padding-right: $column-pad;
+    padding-left: $gutter;
+    padding-right: $gutter;
     margin-top: emRhythm(1, $ms-down1);
   }
 }

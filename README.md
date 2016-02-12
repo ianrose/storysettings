@@ -5,7 +5,7 @@
   <img src="http://fbrctr.github.io/assets/toolkit/images/logo.svg" width="500">
 </p>
 
-# Fabricator
+# Storysettings
 
 > _fabricate_ - to make by assembling parts or sections.
 

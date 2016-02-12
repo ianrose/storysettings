@@ -6,12 +6,22 @@
 // Reset
 @import 'components/normalize';
 
-// Helper Mixins and Functions
-@import 'helpers/mixins-functions';
+// Functions
+//
+
+// Mixins
+@import 'mixins/clearfix';
+@import 'mixins/generate-ratios';
 
 // Vendor
 @import '../../../../bower_components/typesettings/typesettings';
 // @import '../vendor/slick-carousel/slick';
+
+// Utilities
+@import 'utilities/align';
+@import 'utilities/intrinsic';
+@import 'utilities/position';
+@import 'utilities/ratios';
 
 // Components
 @import 'components/article';
@@ -41,8 +51,10 @@
 @import 'components/video-js-youtube';
 
 // Layout
-@import 'layout/col';
-@import 'layout/layout';
+@import 'layout/column';
+@import 'layout/gutter';
+@import 'layout/hang';
+@import 'layout/set';
 
-// Helper Classes
-@import 'helpers/classes';
+// States
+@import 'states';

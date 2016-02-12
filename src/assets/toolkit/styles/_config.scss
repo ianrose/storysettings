@@ -62,10 +62,9 @@ $screen-xs-max: ($screen-sm-min -1px);
 $screen-sm-max: ($screen-md-min - 1px);
 $screen-md-max: ($screen-lg-min - 1px);
 
-// Grid attributes
-$grid-columns: 7;
+// Layout Settings
 $column-width: 720px;
-$column-pad: $base-vertical-unit * 4;
+$gutter: $base-vertical-unit * 4;
 
 // Site Header
 $site-header-height: 46px;

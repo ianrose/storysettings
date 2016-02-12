@@ -5,7 +5,7 @@
   width: 18px;
 
   @media (min-width: $screen-sm-min) {
-    margin-right: $column-pad;
+    margin-right: $gutter;
   }
 
   .is-top & {

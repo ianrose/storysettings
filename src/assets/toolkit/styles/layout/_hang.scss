@@ -1,0 +1,11 @@
+.hang {
+  margin: 0 auto;
+  margin-left: $gutter;
+  margin-right: $gutter;
+  max-width: ($column-width * 2) + ($gutter * 2);
+
+  figure,
+  aside {
+    max-width: $column-width / 2;
+  }
+}

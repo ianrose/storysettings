@@ -16,6 +16,10 @@ Copyright (c) 2015 Daniel Eden
   animation-iteration-count: infinite;
 }
 
+.animated[data-animated^='fade'] {
+  opacity: 0;
+}
+
 @keyframes fadeInLeft {
   from {
     opacity: 0;

@@ -27,13 +27,13 @@
 }
 
 .media__video-embed {
-  @extend .ratio-16x9;
-  @extend .intrinsic-wrapper;
+  @extend .ratio--16x9;
+  @extend .intrinsic;
   width: 100%;
 
   iframe,
   video {
-    @extend .intrinsic-wrapper__element;
+    @extend .intrinsic__element;
   }
 
   &.vjs-fullscreen {

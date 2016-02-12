@@ -1,6 +1,6 @@
 .article__body {
   background-color: $background-color;
-  padding-top: $column-pad * 4;
+  padding-top: $gutter * 4;
 
   p,
   h2,
@@ -14,12 +14,12 @@
     margin-left: auto;
     margin-right: auto;
     max-width: $column-width;
-    padding-left: $column-pad;
-    padding-right: $column-pad;
+    padding-left: $gutter;
+    padding-right: $gutter;
   }
 
   blockquote {
-    max-width: $column-width + ($column-pad * 2);
+    max-width: $column-width + ($gutter * 2);
   }
 
   blockquote p {
@@ -42,8 +42,8 @@
   @include setType(4, $ms-up2);
   margin-left: auto;
   margin-right: auto;
-  padding-left: $column-pad;
-  padding-right: $column-pad;
+  padding-left: $gutter;
+  padding-right: $gutter;
 
   @media (min-width: $screen-sm-min) {
     @include setType(8, $ms-up5);
@@ -53,8 +53,8 @@
 
 .article__intro {
   margin-top: -108px;
-  padding-left: $column-pad;
-  padding-right: $column-pad;
+  padding-left: $gutter;
+  padding-right: $gutter;
   position: absolute;
   text-align: center;
   top: 50%;

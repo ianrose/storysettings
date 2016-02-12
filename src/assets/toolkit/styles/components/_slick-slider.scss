@@ -12,9 +12,9 @@
   border: 0;
   display: block;
   font-size: 0;
-  height: $column-pad;
+  height: $gutter;
   line-height: 0;
-  margin-top: ($column-pad / 2) * -1;
+  margin-top: ($gutter / 2) * -1;
   outline: none;
   position: absolute;
   top: 50%;
@@ -22,14 +22,14 @@
 
   &:before {
     font-size: $base-font-size;
-    line-height: $column-pad;
+    line-height: $gutter;
     position: absolute;
     top: 0;
   }
 }
 
 .slick-next {
-  right: $column-pad;
+  right: $gutter;
 
   &:before {
     content: '›';
@@ -37,7 +37,7 @@
 }
 
 .slick-prev {
-  left: $column-pad;
+  left: $gutter;
 
   &:before {
     content: '‹';
@@ -58,10 +58,10 @@
 .slick-dots li {
   cursor: pointer;
   display: inline-block;
-  height: $column-pad;
+  height: $gutter;
   margin: 0 5px;
   position: relative;
-  width: $column-pad;
+  width: $gutter;
 }
 
 .slick-dots button {
@@ -71,24 +71,24 @@
   cursor: pointer;
   display: block;
   font-size: 0;
-  height: $column-pad;
+  height: $gutter;
   line-height: 0;
   outline: none;
   padding: 5px;
   position: absolute;
-  width: $column-pad;
+  width: $gutter;
 
   &:before {
     color: $light-grey;
     content: '•';
     font-size: $base-font-size;
     font-weight: 900;
-    height: $column-pad;
+    height: $gutter;
     left: 0;
-    line-height: $column-pad;
+    line-height: $gutter;
     position: absolute;
     top: 0;
-    width: $column-pad;
+    width: $gutter;
   }
 }
 
