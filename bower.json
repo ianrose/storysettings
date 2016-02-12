@@ -1,0 +1,30 @@
+{
+  "name": "Storysettings",
+  "description": "A tool for building stories on the web",
+  "main": "README.md",
+  "authors": [
+    "Ian Rose"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "toolkit",
+    "styleguide",
+    "framework",
+    "scaffold",
+    "patterns",
+    "library"
+  ],
+  "homepage": "https://github.com/ianrose/storysettings",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "typesettings": "^3.0.1",
+    "lazysizes": "^1.4.0"
+  }
+}
