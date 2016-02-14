@@ -24,11 +24,11 @@
 }
 
 .gutter--vertical {
-  padding-top: emRhythm($base-line-multi);
-  padding-bottom: emRhythm($base-line-multi);
+  margin-top: emRhythm($base-line-multi);
+  margin-bottom: emRhythm($base-line-multi);
 }
 
 .gutter--vertical-2x {
-  padding-top: emRhythm($base-line-multi * 2);
-  padding-bottom: emRhythm($base-line-multi * 2);
+  margin-top: emRhythm($base-line-multi * 2);
+  margin-bottom: emRhythm($base-line-multi * 2);
 }

@@ -11,7 +11,7 @@
     text-align: center;
     p,
     q {
-      background-color: #fefac1;
+      background-color: #ffffbf;
       margin-bottom: 0;
       font-weight: bold;
     }
@@ -21,12 +21,12 @@
   .gutter--horizontal-2x,
   .gutter--vertical,
   .gutter--vertical-2x {
-    background-color: #FEF588;
+    background-color: #fee090;
   }
 }
 
 #set.f-item-group .column--2x {
-  background-color: #fefac1;
+  background-color: #ffffbf;
 }
 
 #site-header.f-item-group .site-header {
@@ -50,4 +50,11 @@
     width: 25%;
     opacity: 1;
   }
+}
+
+#position.f-item-group .f-item-preview {
+  background-color: #ffffbf;
+  font-weight: bold;
+  height: 50vh;
+  position: relative;
 }

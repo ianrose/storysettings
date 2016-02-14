@@ -55,7 +55,7 @@ h1,
   margin-bottom: emRhythm(1, $ms-up3, $silent: true); // [1]
 
   @media (min-width: $screen-sm-min) {
-    @include setType(8, $ms-up5);
+    @include setType(7, $ms-up5);
     margin-bottom: emRhythm(1, $ms-up5, $silent: true);
   }
 }
@@ -69,7 +69,7 @@ h2,
 h3,
 .h3 {
   @include setType(3, $ms-up1);
-  margin-bottom: emRhythm(1);
+  margin-bottom: emRhythm(1, $ms-up1);
 }
 
 h4,
@@ -82,8 +82,8 @@ h5,
 .h5,
 h6,
 .h6 {
-  @include setType(3, $ms-down1);
-  margin-bottom: 0;
+  @include setType(2, $ms-down1);
+  margin-bottom: emRhythm(1, $ms-down1);
 }
 
 a,
@@ -138,7 +138,7 @@ figure {
 
 figcaption {
   @include setType(2, $ms-down1);
-  color: $light-grey;
+  color: $grey;
   font-family: $font-sans;
   font-weight: 400;
   margin-top: $base-vertical-unit;
@@ -174,7 +174,7 @@ blockquote {
 pre,
 code,
 kbd {
-  background-color: lighten($text-color, 97%);
+  background-color: $lighter-grey;
   font-family: $font-mono;
   margin: 0;
   padding-left: 0.25em;
@@ -237,7 +237,7 @@ hr {
   @include rhythmBorderTop(1px, 3);
   border: 0;
   border-top: 1px;
-  border-top-color: $lighter-grey;
+  border-top-color: $light-grey;
   border-top-style: solid; // [1]
   margin-bottom: 0;
   margin-top: emRhythm(4);
@@ -259,7 +259,7 @@ table + figcaption {
 
 tr {
   display: block;
-  border-bottom: 1px solid $lighter-grey;
+  border-bottom: 1px solid $light-grey;
 
   @media (min-width: $screen-sm-min) {
     display: table-row;
@@ -318,7 +318,7 @@ form p {
 textarea,
 select {
   background-color: #fff;
-  border: 1px solid lighten($text-color, 60%); /* The 6px vertically centers text on FF, ignored by Webkit */
+  border: 1px solid $grey; /* The 6px vertically centers text on FF, ignored by Webkit */
   box-shadow: none;
   box-sizing: border-box;
   font-family: $font-sans;
@@ -396,8 +396,7 @@ button:hover,
 button:focus,
 [type='submit']:focus,
 [type='reset']:focus,
-[type='button']:focus { 
-  color: #333;
+[type='button']:focus {
   border-color: $link-color;
   outline: 0;
 }
@@ -405,7 +404,7 @@ button:focus,
 label,
 legend {
   @include setType($base-line-multi, $ms-down1);
-  color: $light-grey;
+  color: $grey;
   display: block;
   font-family: $font-sans;
   font-weight: 400;
