@@ -10,6 +10,7 @@
     "prestart": "npm install",
     "build": "npm install && gulp",
     "start": "gulp --dev",
+    "dev": "gulp --dev",
     "postinstall": "bower install",
     "test": "npm run build"
   },

@@ -75,14 +75,14 @@ h3,
 h4,
 .h4 {
   @include setType(3);
-  margin-bottom: emRhythm(1, $ms-up1, $silent: true);
+  margin-bottom: emRhythm(1);
 }
 
 h5,
 .h5,
 h6,
 .h6 {
-  @include setType(3, $ms-down2);
+  @include setType(3, $ms-down1);
   margin-bottom: 0;
 }
 
@@ -120,7 +120,7 @@ p {
 
 small,
 .font-small {
-  @include setType(3, $ms-down1);
+  font-size: $ms-down1;
 }
 
 em {
@@ -172,13 +172,18 @@ blockquote {
 }
 
 pre,
-code {
-  background-color: lighten($text-color, 75%);
+code,
+kbd {
+  background-color: lighten($text-color, 97%);
   font-family: $font-mono;
-  font-size: $ms-down1;
   margin: 0;
   padding-left: 0.25em;
   padding-right: 0.25em;
+}
+
+code,
+kbd {
+  font-size: $ms-down1;
 }
 
 ol,
@@ -188,7 +193,7 @@ dl {
   margin-left: 0;
   margin-top: 0;
   padding-bottom: 0;
-  padding-left: emRhythm(6);
+  padding-left: emRhythm(3);
   padding-top: 0;
 }
 
@@ -206,10 +211,14 @@ ol {
   list-style: decimal;
 }
 
+dt {
+  font-weight: bold;
+}
+
 // [1] https://developer.mozilla.org/en-US/docs/CSS/font-variant
 abbr {
   font-variant: small-caps; // [1]
-  font-weight: 600;
+  font-weight: normal;
   text-transform: lowercase;
 }
 
@@ -227,6 +236,7 @@ mark {
 hr {
   @include rhythmBorderTop(1px, 3);
   border: 0;
+  border-top: 1px;
   border-top-color: $lighter-grey;
   border-top-style: solid; // [1]
   margin-bottom: 0;
@@ -292,19 +302,19 @@ form p {
   margin-bottom: 0;
 }
 
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='text'],
+[type='tel'],
+[type='url'],
+[type='password'],
+[type='date'],
+[type='month'],
+[type='week'],
+[type='time'],
+[type='datetime'],
+[type='datetime-local'],
 textarea,
 select {
   background-color: #fff;
@@ -319,13 +329,13 @@ select {
 }
 
 /* Removes awkward default styles on some inputs for iOS */
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='text'],
+[type='tel'],
+[type='url'],
+[type='password'],
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -338,22 +348,57 @@ textarea {
   padding-top: $base-vertical-unit;
 }
 
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
+[type='email']:focus,
+[type='number']:focus,
+[type='search']:focus,
+[type='text']:focus,
+[type='tel']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='date']:focus,
+[type='month']:focus,
+[type='week']:focus,
+[type='time']:focus,
+[type='datetime']:focus,
+[type='datetime-local']:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33c3f0;
+  border: 1px solid $link-color;
+  outline: 0;
+}
+
+.button,
+button,
+[type='submit'],
+[type='reset'],
+[type='button'] {
+  display: inline-block;
+  height: $base-vertical-unit * 4;
+  padding: 0 ($base-vertical-unit * 2);
+  text-align: center;
+  font-size: $base-font-size;
+  font-weight: normal;
+  line-height: $base-vertical-unit * 4;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 1px solid $light-grey;
+  cursor: pointer;
+  font-family: $font-sans;
+}
+
+.button:hover,
+button:hover,
+[type='submit']:hover,
+[type='reset']:hover,
+[type='button']:hover,
+.button:focus,
+button:focus,
+[type='submit']:focus,
+[type='reset']:focus,
+[type='button']:focus { 
+  color: #333;
+  border-color: $link-color;
   outline: 0;
 }
 
@@ -362,8 +407,11 @@ legend {
   @include setType($base-line-multi, $ms-down1);
   color: $light-grey;
   display: block;
-  font-family: $font-serif;
+  font-family: $font-sans;
   font-weight: 400;
+}
+
+legend {
   margin-bottom: emRhythm(1, $ms-down1);
 }
 
@@ -372,12 +420,12 @@ fieldset {
   padding: 0;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
   display: inline;
 }
 
-input[type="file"] {
+[type='file'] {
   padding-left: 0;
   padding-right: 0;
 }

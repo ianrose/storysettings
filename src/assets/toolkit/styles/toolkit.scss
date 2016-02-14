@@ -4,7 +4,7 @@
 @import 'config';
 
 // Reset
-@import 'components/normalize';
+@import 'normalize';
 
 // Functions
 //
@@ -23,10 +23,13 @@
 @import 'utilities/position';
 @import 'utilities/ratios';
 
+// Base
+@import 'base';
+
 // Components
 @import 'components/article';
+@import 'components/article-header';
 @import 'components/animate';
-@import 'components/base';
 @import 'components/captions';
 @import 'components/chart';
 @import 'components/credits';
@@ -38,9 +41,7 @@
 @import 'components/media';
 @import 'components/progress';
 @import 'components/pullquote';
-@import 'components/section';
 @import 'components/share';
-@import 'components/sidebar';
 @import 'components/site-header';
 @import 'components/site-logo';
 @import 'components/site-title';
