@@ -1,7 +1,10 @@
 .pullquote {
   @include setType(4, $ms-up2);
   font-weight: 900;
-  margin-bottom: emRhythm($base-line-multi, $ms-up2);
+
+  @media (min-width: $screen-xs-min) {
+    margin-bottom: emRhythm($base-line-multi, $ms-up2);
+  }
 }
 
 .pullquote q:before {
