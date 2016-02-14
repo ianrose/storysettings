@@ -8,6 +8,6 @@
 
   @media (min-width: $screen-sm-min) {
     @include setType(4, $ms-up2);
-    margin-bottom: emRhythm(1, $ms-up2);
+    margin-bottom: emRhythm(2, $ms-up2);
   }
 }

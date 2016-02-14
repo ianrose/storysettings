@@ -8,6 +8,7 @@
   "expr": true,
   "forin": true,
   "immed": true,
+  "jquery": true,
   "noarg": true,
   "node": true,
   "noempty": true,

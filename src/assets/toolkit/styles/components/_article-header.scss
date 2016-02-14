@@ -4,7 +4,6 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
-  text-shadow: 0 0 10px #000;
   z-index: -1;
 }
 
@@ -30,4 +29,14 @@
   top: 50%;
   width: 100%;
   z-index: 1;
+}
+
+.article-header__bg {
+  height: 100vh;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
 }

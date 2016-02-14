@@ -161,7 +161,7 @@ blockquote {
 
   cite {
     @include setType(2, $ms-down1);
-    color: $light-grey;
+    color: $grey;
     font-family: $font-sans;
     font-style: normal;
     font-weight: 400;
@@ -169,6 +169,18 @@ blockquote {
     padding-right: $gutter;
     margin-top: emRhythm(1, $ms-down1);
   }
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q:before {
+  content: open-quote;
+}
+
+q:after {
+  content: close-quote;
 }
 
 pre,
