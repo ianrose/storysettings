@@ -1,10 +1,8 @@
 .article-header {
-  background-color: #000;
   color: #fff;
   height: 100vh;
   overflow: hidden;
   position: relative;
-  z-index: -1;
 }
 
 .article-header--1-2 {
@@ -36,15 +34,14 @@
   text-align: center;
   top: 50%;
   width: 100%;
-  z-index: 1;
 }
 
 .article-header__bg {
-  // height: 100%;
   left: 50%;
   min-height: 100%;
   min-width: 100%;
   position: absolute;
   top: 0;
   transform: translateX(-50%);
+  z-index: -1;
 }
