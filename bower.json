@@ -24,7 +24,6 @@
     "tests"
   ],
   "devDependencies": {
-    "typesettings": "^3.0.1",
-    "lazysizes": "^1.4.0"
+    "typesettings": "^3.0.1"
   }
 }

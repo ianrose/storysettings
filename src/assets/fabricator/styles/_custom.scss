@@ -1,3 +1,7 @@
+.f-item-group .article__body {
+  padding-top: 0;
+}
+
 #column.f-item-group,
 #gutter.f-item-group,
 #hang.f-item-group,
@@ -41,7 +45,7 @@
   padding-right: 36px;
 }
 
-#progress.f-item-group {
+#progress-bar.f-item-group {
   .progress {
     position: static;
   }
