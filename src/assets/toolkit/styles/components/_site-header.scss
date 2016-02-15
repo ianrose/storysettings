@@ -11,12 +11,21 @@
   width: 100%;
   z-index: 2;
 
-  a {
+  a,
+  a:link,
+  a:visited,
+  svg {
     color: $text-color;
+    fill: $text-color;
   }
 
-  svg {
-    fill: $text-color;
+  a:hover,
+  a:active,
+  svg:hover,
+  svg:active {
+    color: lighten($text-color, 35%);
+    text-decoration: none;
+    fill: lighten($text-color, 35%);
   }
 }
 

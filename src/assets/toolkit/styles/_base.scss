@@ -6,12 +6,12 @@ body {
   background-color: $background-color;
   color: $text-color;
   font-family: $font-serif;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
   font-weight: 300;
   margin: auto;
   overflow-x: hidden;
   padding: 0;
-  font-kerning: normal;
-  font-variant-ligatures: common-ligatures;
 }
 
 h1,
@@ -138,7 +138,7 @@ figure {
 
 figcaption {
   @include setType(2, $ms-down1);
-  color: $grey;
+  color: $secondary-text-color;
   font-family: $font-sans;
   font-weight: 400;
   margin-top: $base-vertical-unit;
@@ -161,19 +161,19 @@ blockquote {
 
   cite {
     @include setType(2, $ms-down1);
-    color: $grey;
+    color: $secondary-text-color;
     display: block;
     font-family: $font-sans;
     font-style: normal;
     font-weight: 400;
+    margin-top: emRhythm(1, $ms-down1);
     padding-left: $gutter;
     padding-right: $gutter;
-    margin-top: emRhythm(1, $ms-down1);
   }
 }
 
 q {
-  quotes: "“" "”" "‘" "’";
+  quotes: '“' '”' '‘' '’';
 }
 
 q:before {
@@ -271,8 +271,8 @@ table + figcaption {
 }
 
 tr {
-  display: block;
   border-bottom: 1px solid $light-grey;
+  display: block;
 
   @media (min-width: $screen-sm-min) {
     display: table-row;
@@ -350,8 +350,8 @@ select {
 [type='url'],
 [type='password'],
 textarea {
-  -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -385,19 +385,19 @@ button,
 [type='submit'],
 [type='reset'],
 [type='button'] {
-  display: inline-block;
-  height: $base-vertical-unit * 4;
-  padding: 0 ($base-vertical-unit * 2);
-  text-align: center;
-  font-size: $base-font-size;
-  font-weight: normal;
-  line-height: $base-vertical-unit * 4;
-  text-decoration: none;
-  white-space: nowrap;
   background-color: transparent;
   border: 1px solid $light-grey;
   cursor: pointer;
+  display: inline-block;
   font-family: $font-sans;
+  font-size: $base-font-size;
+  font-weight: normal;
+  height: $base-vertical-unit * 4;
+  line-height: $base-vertical-unit * 4;
+  padding: 0 ($base-vertical-unit * 2);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .button:hover,
@@ -417,7 +417,7 @@ button:focus,
 label,
 legend {
   @include setType($base-line-multi, $ms-down1);
-  color: $grey;
+  color: $secondary-text-color;
   display: block;
   font-family: $font-sans;
   font-weight: 400;
