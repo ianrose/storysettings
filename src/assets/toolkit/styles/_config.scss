@@ -79,8 +79,8 @@ $screen-sm-max: ($screen-md-min - 1px);
 $screen-md-max: ($screen-lg-min - 1px);
 
 // Layout Settings
-$column-width: 720px;
-$gutter: $base-vertical-unit * 4;
+$column-width: 660px;
+$gutter: $base-vertical-unit * $base-line-multi;
 
 // Site Header
 $site-header-height: 46px;

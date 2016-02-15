@@ -162,6 +162,7 @@ blockquote {
   cite {
     @include setType(2, $ms-down1);
     color: $grey;
+    display: block;
     font-family: $font-sans;
     font-style: normal;
     font-weight: 400;
