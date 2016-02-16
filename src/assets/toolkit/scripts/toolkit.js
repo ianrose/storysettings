@@ -143,7 +143,7 @@ $(document).ready(function(){
   });
 
   // Fades in from the left hanging elements as they enter viewport
-  $('.hang').waypoint(function() {
+  $('[data-animated]').waypoint(function() {
     $(this.element).toggleClass($(this.element).data('animated'));
     this.destroy();
   }, {
