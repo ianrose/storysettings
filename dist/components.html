@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+	<link href="http://vjs.zencdn.net/5.6.0/video-js.css" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+	<!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<!-- /toolkit styles -->
+
+	<link href='https://fonts.googleapis.com/css?family=Merriweather:300,300italic,700,700italic,900|Arimo:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="f-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="f-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="f-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="f-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="f-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!-- fabricator menu -->
+		<div class="f-menu">
+		
+			<div class="f-controls">
+				<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#f-icon-labels" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#f-icon-notes" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#f-icon-code" />
+					</svg>
+				</div>
+			</div>
+		
+			<ul>
+		
+				<li>
+					<a href="index.html" class="f-menu__heading">Overview</a>
+				</li>
+		
+				<li>
+					<a href="components.html" class="f-menu__heading">Components</a>
+					<ul>
+						<li>
+							<a href="components.html#article">Article</a>
+						</li>
+						<li>
+							<a href="components.html#byline">Byline</a>
+						</li>
+						<li>
+							<a href="components.html#caption">Caption</a>
+						</li>
+						<li>
+							<a href="components.html#credits">Credits</a>
+						</li>
+						<li>
+							<a href="components.html#dek">Dek</a>
+						</li>
+						<li>
+							<a href="components.html#dropcap">Dropcap</a>
+						</li>
+						<li>
+							<a href="components.html#media">Media</a>
+						</li>
+						<li>
+							<a href="components.html#progress-bar">Progress Bar</a>
+						</li>
+						<li>
+							<a href="components.html#pullquote">Pullquote</a>
+						</li>
+						<li>
+							<a href="components.html#share">Share</a>
+						</li>
+						<li>
+							<a href="components.html#site-header">Site Header</a>
+						</li>
+						<li>
+							<a href="components.html#site-logo">Site Logo</a>
+						</li>
+						<li>
+							<a href="components.html#site-title">Site Title</a>
+						</li>
+						<li>
+							<a href="components.html#site-top">Site Top</a>
+						</li>
+						<li>
+							<a href="components.html#tombstone">Tombstone</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="layout.html" class="f-menu__heading">Layout</a>
+					<ul>
+						<li>
+							<a href="layout.html#column">Column</a>
+						</li>
+						<li>
+							<a href="layout.html#gutter">Gutter</a>
+						</li>
+						<li>
+							<a href="layout.html#hang">Hang</a>
+						</li>
+						<li>
+							<a href="layout.html#set">Set</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="utilities.html" class="f-menu__heading">Utilities</a>
+					<ul>
+						<li>
+							<a href="utilities.html#align">Align</a>
+						</li>
+						<li>
+							<a href="utilities.html#intrinsic-ratios">Intrinsic Ratios</a>
+						</li>
+						<li>
+							<a href="utilities.html#position">Position</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="states.html" class="f-menu__heading">States</a>
+				</li>
+		
+				<li>
+					<a href="base.html" class="f-menu__heading">Base</a>
+				</li>
+		
+				<li>
+					<a href="examples.html" class="f-menu__heading">Examples</a>
+					<ul>
+						<li>
+							<a href="examples/longform.html" target="_blank">Longform</a>
+						</li>
+						<li>
+							<a href="examples/slides.html" target="_blank">Slides</a>
+						</li>
+					</ul>
+				</li>
+		
+				<!-- <li>
+					<a href="docs.html" class="f-menu__heading">Docs</a>
+					<ul>
+						<li>
+							<a href="docs.html#javascript">Javascript</a>
+						</li>
+					</ul>
+				</li> -->
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<div class="f-container">
+			<div class="f-control-bar">
+				<div class="f-control f-menu-toggle">
+					<svg>
+						<use xlink:href="#f-icon-menu" />
+					</svg>
+				</div>
+			</div>
+
+
+	
+<h1 data-f-toggle="labels">Components</h1>
+
+
+<div class="f-item-group" id="article">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Article</h2>
+	</div>
+		<div class="f-item-group" id="article.article-body">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Article Body</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div data-sset="article-body" class="article__body" itemprop="articleBody">
+	<p>The body of the article. Fusce et dapibus dui. Proin in vestibulum purus, at tempor diam. Vivamus aliquet ipsum et libero vehicula eleifend. Curabitur efficitur, nisl tincidunt fringilla ultricies, lacus tellus rhoncus ex, et tincidunt turpis dui quis
+		odio. Nulla laoreet tortor eget lacus venenatis, sed congue nulla posuere. Donec venenatis nunc diam, vitae faucibus purus tincidunt nec. Mauris tempor rutrum faucibus. Praesent ac erat tincidunt, convallis lacus sed, vehicula nunc. Integer sit amet
+		congue nisl, et hendrerit elit. Integer eu ex varius, dignissim nibh eu, iaculis ipsum. Aliquam finibus vestibulum elit quis maximus. Phasellus in augue sit amet enim molestie ultrices sed quis dolor. Donec a sem imperdiet, aliquam est at, porta massa.
+		Integer ac lectus fringilla, vehicula dolor ut, sodales tellus. Curabitur non lobortis sem. Donec et lacus felis.
+		<p>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div data-sset=&quot;article-body&quot; class=&quot;article__body&quot; itemprop=&quot;articleBody&quot;&gt;
+	&lt;p&gt;The body of the article. Fusce et dapibus dui. Proin in vestibulum purus, at tempor diam. Vivamus aliquet ipsum et libero vehicula eleifend. Curabitur efficitur, nisl tincidunt fringilla ultricies, lacus tellus rhoncus ex, et tincidunt turpis dui quis
+		odio. Nulla laoreet tortor eget lacus venenatis, sed congue nulla posuere. Donec venenatis nunc diam, vitae faucibus purus tincidunt nec. Mauris tempor rutrum faucibus. Praesent ac erat tincidunt, convallis lacus sed, vehicula nunc. Integer sit amet
+		congue nisl, et hendrerit elit. Integer eu ex varius, dignissim nibh eu, iaculis ipsum. Aliquam finibus vestibulum elit quis maximus. Phasellus in augue sit amet enim molestie ultrices sed quis dolor. Donec a sem imperdiet, aliquam est at, porta massa.
+		Integer ac lectus fringilla, vehicula dolor ut, sodales tellus. Curabitur non lobortis sem. Donec et lacus felis.
+		&lt;p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="article.article-header">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Article Header</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<header data-sset="article-header" class="article-header">
+	<div id="js-article-intro" class="article-header__intro">
+		<h1>Headline of the Article</h1>
+	</div>
+	<img src="https://images.unsplash.com/photo-1445452916036-9022dfd33aa8?crop=entropy&dpr=2&fit=crop&fm=jpg&h=1125&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1700" alt="https://unsplash.com/photos/HbhJyWnE9Oo" class="article-header__bg">
+</header>
+
+<header data-sset="article-header" class="article-header article-header--3-4">
+	<div data-sset="article-intro" class="article-header__intro">
+		<h1>Headline of the Article</h1>
+	</div>
+	<img src="https://images.unsplash.com/photo-1445452916036-9022dfd33aa8?crop=entropy&dpr=2&fit=crop&fm=jpg&h=1125&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1700" alt="https://unsplash.com/photos/HbhJyWnE9Oo" class="article-header__bg">
+</header>
+
+<header data-sset="article-header" class="article-header article-header--1-2">
+	<div data-sset="article-intro" class="article-header__intro">
+		<h1>Headline of the Article</h1>
+	</div>
+	<img src="https://images.unsplash.com/photo-1445452916036-9022dfd33aa8?crop=entropy&dpr=2&fit=crop&fm=jpg&h=1125&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1700" alt="https://unsplash.com/photos/HbhJyWnE9Oo" class="article-header__bg">
+</header>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;header data-sset=&quot;article-header&quot; class=&quot;article-header&quot;&gt;
+	&lt;div id=&quot;js-article-intro&quot; class=&quot;article-header__intro&quot;&gt;
+		&lt;h1&gt;Headline of the Article&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;img src=&quot;https://images.unsplash.com/photo-1445452916036-9022dfd33aa8?crop=entropy&amp;dpr=2&amp;fit=crop&amp;fm=jpg&amp;h=1125&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=50&amp;w=1700&quot; alt=&quot;https://unsplash.com/photos/HbhJyWnE9Oo&quot; class=&quot;article-header__bg&quot;&gt;
+&lt;/header&gt;
+
+&lt;header data-sset=&quot;article-header&quot; class=&quot;article-header article-header--3-4&quot;&gt;
+	&lt;div data-sset=&quot;article-intro&quot; class=&quot;article-header__intro&quot;&gt;
+		&lt;h1&gt;Headline of the Article&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;img src=&quot;https://images.unsplash.com/photo-1445452916036-9022dfd33aa8?crop=entropy&amp;dpr=2&amp;fit=crop&amp;fm=jpg&amp;h=1125&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=50&amp;w=1700&quot; alt=&quot;https://unsplash.com/photos/HbhJyWnE9Oo&quot; class=&quot;article-header__bg&quot;&gt;
+&lt;/header&gt;
+
+&lt;header data-sset=&quot;article-header&quot; class=&quot;article-header article-header--1-2&quot;&gt;
+	&lt;div data-sset=&quot;article-intro&quot; class=&quot;article-header__intro&quot;&gt;
+		&lt;h1&gt;Headline of the Article&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;img src=&quot;https://images.unsplash.com/photo-1445452916036-9022dfd33aa8?crop=entropy&amp;dpr=2&amp;fit=crop&amp;fm=jpg&amp;h=1125&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=50&amp;w=1700&quot; alt=&quot;https://unsplash.com/photos/HbhJyWnE9Oo&quot; class=&quot;article-header__bg&quot;&gt;
+&lt;/header&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="article.blockquote">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Blockquote</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div data-sset="article-body" class="article__body" itemprop="articleBody">
+	<blockquote>
+		<p>In vel condimentum augue. Sed tristique felis nec justo pharetra, vitae luctus nibh sagittis. Donec nunc sem, ultrices a pellentesque quis, sollicitudin euismod mi.</p>
+		<cite>Author of Quote | <a href="#" target="_blank" rel="external">Link to source</a></cite>
+	</blockquote>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div data-sset=&quot;article-body&quot; class=&quot;article__body&quot; itemprop=&quot;articleBody&quot;&gt;
+	&lt;blockquote&gt;
+		&lt;p&gt;In vel condimentum augue. Sed tristique felis nec justo pharetra, vitae luctus nibh sagittis. Donec nunc sem, ultrices a pellentesque quis, sollicitudin euismod mi.&lt;/p&gt;
+		&lt;cite&gt;Author of Quote | &lt;a href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Link to source&lt;/a&gt;&lt;/cite&gt;
+	&lt;/blockquote&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="article.headings">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Headings</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div data-sset="article-body" class="article__body">
+	<h1>Heading One</h1>
+	<h2>Heading Two</h2>
+	<h3>Heading Three</h3>
+	<h4>Heading Four</h4>
+	<h5>Heading Five</h5>
+	<h6>Heding Six</h6>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div data-sset=&quot;article-body&quot; class=&quot;article__body&quot;&gt;
+	&lt;h1&gt;Heading One&lt;/h1&gt;
+	&lt;h2&gt;Heading Two&lt;/h2&gt;
+	&lt;h3&gt;Heading Three&lt;/h3&gt;
+	&lt;h4&gt;Heading Four&lt;/h4&gt;
+	&lt;h5&gt;Heading Five&lt;/h5&gt;
+	&lt;h6&gt;Heding Six&lt;/h6&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="article.lists">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Lists</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div data-sset="article-body" class="article__body">
+	<ul>
+		<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+		<li>Aliquam tincidunt mauris eu risus.</li>
+		<li>Vestibulum auctor dapibus neque.</li>
+	</ul>
+
+	<ol>
+		<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+		<li>Aliquam tincidunt mauris eu risus.</li>
+		<li>Vestibulum auctor dapibus neque.</li>
+	</ol>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div data-sset=&quot;article-body&quot; class=&quot;article__body&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+		&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+		&lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;ol&gt;
+		&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+		&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+		&lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="article.paragraph">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Paragraph</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div data-sset="article-body" class="article__body">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in consectetur nisl. Fusce cursus dictum arcu, ac consequat ante tristique non. Aliquam sit amet suscipit urna. Nunc ullamcorper ex sem, sed dapibus elit tempor et. Nam mattis id nunc
+		nec dictum. Suspendisse potenti. Maecenas id gravida massa. Etiam commodo egestas eros id ultrices. Nam sodales facilisis dolor et volutpat. Vestibulum vitae purus at turpis tincidunt lobortis. Maecenas commodo tortor eu purus blandit egestas. Integer
+		nec diam non sem rutrum euismod. Fusce vel nulla in mauris placerat cursus. Mauris purus nisi, eleifend ut mauris in, porttitor iaculis neque. Cras aliquam dolor ut sem gravida pulvinar a auctor tortor.</p>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div data-sset=&quot;article-body&quot; class=&quot;article__body&quot;&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in consectetur nisl. Fusce cursus dictum arcu, ac consequat ante tristique non. Aliquam sit amet suscipit urna. Nunc ullamcorper ex sem, sed dapibus elit tempor et. Nam mattis id nunc
+		nec dictum. Suspendisse potenti. Maecenas id gravida massa. Etiam commodo egestas eros id ultrices. Nam sodales facilisis dolor et volutpat. Vestibulum vitae purus at turpis tincidunt lobortis. Maecenas commodo tortor eu purus blandit egestas. Integer
+		nec diam non sem rutrum euismod. Fusce vel nulla in mauris placerat cursus. Mauris purus nisi, eleifend ut mauris in, porttitor iaculis neque. Cras aliquam dolor ut sem gravida pulvinar a auctor tortor.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="byline">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Byline</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<p class="byline">by <span itemprop="author">Author Name</span></p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p class=&quot;byline&quot;&gt;by &lt;span itemprop=&quot;author&quot;&gt;Author Name&lt;/span&gt;&lt;/p&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="caption">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Caption</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<figure>
+	<figcaption class="caption">This is a caption</figcaption>
+</figure>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;figure&gt;
+	&lt;figcaption class=&quot;caption&quot;&gt;This is a caption&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="credits">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Credits</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<footer class="credits">
+	<h2 class="credits__heading">Credits</h2>
+	<p class="credits__person">
+		<span class="credits__responsibility">Words</span> <strong>Alton	Howard</strong>
+	</p>
+	<p class="credits__person">
+		<span class="credits__responsibility">Video</span> <strong>Floyd	Wolfe</strong>
+	</p>
+	<p class="credits__person">
+		<span class="credits__responsibility">Photos</span> <strong>Lynne	Hernandez</strong>
+	</p>
+</footer>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;footer class=&quot;credits&quot;&gt;
+	&lt;h2 class=&quot;credits__heading&quot;&gt;Credits&lt;/h2&gt;
+	&lt;p class=&quot;credits__person&quot;&gt;
+		&lt;span class=&quot;credits__responsibility&quot;&gt;Words&lt;/span&gt; &lt;strong&gt;Alton	Howard&lt;/strong&gt;
+	&lt;/p&gt;
+	&lt;p class=&quot;credits__person&quot;&gt;
+		&lt;span class=&quot;credits__responsibility&quot;&gt;Video&lt;/span&gt; &lt;strong&gt;Floyd	Wolfe&lt;/strong&gt;
+	&lt;/p&gt;
+	&lt;p class=&quot;credits__person&quot;&gt;
+		&lt;span class=&quot;credits__responsibility&quot;&gt;Photos&lt;/span&gt; &lt;strong&gt;Lynne	Hernandez&lt;/strong&gt;
+	&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="dek">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Dek</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<p class="dek" itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id sem sed lorem sodales rutrum sed et velit.</p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p class=&quot;dek&quot; itemprop=&quot;description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id sem sed lorem sodales rutrum sed et velit.&lt;/p&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="dropcap">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Dropcap</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<p><span class="dropcap">T</span>he body of the article. Fusce et dapibus dui. Proin in vestibulum purus, at tempor diam. Vivamus aliquet ipsum et libero vehicula eleifend. Curabitur efficitur, nisl tincidunt fringilla ultricies, lacus tellus rhoncus ex,
+	et tincidunt turpis dui quis odio. Nulla laoreet tortor eget lacus venenatis, sed congue nulla posuere. Donec venenatis nunc diam, vitae faucibus purus tincidunt nec. Mauris tempor rutrum faucibus.
+	<p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p&gt;&lt;span class=&quot;dropcap&quot;&gt;T&lt;/span&gt;he body of the article. Fusce et dapibus dui. Proin in vestibulum purus, at tempor diam. Vivamus aliquet ipsum et libero vehicula eleifend. Curabitur efficitur, nisl tincidunt fringilla ultricies, lacus tellus rhoncus ex,
+	et tincidunt turpis dui quis odio. Nulla laoreet tortor eget lacus venenatis, sed congue nulla posuere. Donec venenatis nunc diam, vitae faucibus purus tincidunt nec. Mauris tempor rutrum faucibus.
+	&lt;p&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="media">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Media</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<figure class="media">
+	<img class="lazyload" src="https://images.unsplash.com/photo-1452716726610-30ed68426a6b?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1925" data-srcset="https://images.unsplash.com/photo-1452716726610-30ed68426a6b?crop=entropy&dpr=2&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1925"
+		srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt Text">
+	<figcaption>Caption text goes here to provide more context for the media | <a href="https://unsplash.com/photos/8BmNurlVR6M">Frances Gunn</a></figcaption>
+</figure>
+
+<figure class="media">
+	<video id="vid1" class="video-js vjs-default-skin vjs-16-9" controls width="1280" height="720" data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=W86EAWPR4hY"}] }'>
+	</video>
+	<figcaption>Cinematography Demo | <a href="https://www.youtube.com/watch?v=W86EAWPR4hY">YouTube</a></figcaption>
+</figure>
+
+
+<div class="media media__video-embed">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/W86EAWPR4hY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;figure class=&quot;media&quot;&gt;
+	&lt;img class=&quot;lazyload&quot; src=&quot;https://images.unsplash.com/photo-1452716726610-30ed68426a6b?crop=entropy&amp;dpr=2&amp;fit=crop&amp;fm=jpg&amp;h=675&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=50&amp;w=1925&quot; data-srcset=&quot;https://images.unsplash.com/photo-1452716726610-30ed68426a6b?crop=entropy&amp;dpr=2&amp;fit=crop&amp;fm=jpg&amp;h=675&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=50&amp;w=1925&quot;
+		srcset=&quot;data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot; alt=&quot;Alt Text&quot;&gt;
+	&lt;figcaption&gt;Caption text goes here to provide more context for the media | &lt;a href=&quot;https://unsplash.com/photos/8BmNurlVR6M&quot;&gt;Frances Gunn&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;media&quot;&gt;
+	&lt;video id=&quot;vid1&quot; class=&quot;video-js vjs-default-skin vjs-16-9&quot; controls width=&quot;1280&quot; height=&quot;720&quot; data-setup=&#x27;{ &quot;techOrder&quot;: [&quot;youtube&quot;], &quot;sources&quot;: [{ &quot;type&quot;: &quot;video/youtube&quot;, &quot;src&quot;: &quot;https://www.youtube.com/watch?v=W86EAWPR4hY&quot;}] }&#x27;&gt;
+	&lt;/video&gt;
+	&lt;figcaption&gt;Cinematography Demo | &lt;a href=&quot;https://www.youtube.com/watch?v=W86EAWPR4hY&quot;&gt;YouTube&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;div class=&quot;media media__video-embed&quot;&gt;
+	&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/W86EAWPR4hY?rel=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="progress-bar">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Progress Bar</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<div class="progress">
+	<div data-sset="progress" class="progress__bar"></div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;progress&quot;&gt;
+	&lt;div data-sset=&quot;progress&quot; class=&quot;progress__bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="pullquote">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Pullquote</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<aside class="pullquote">
+	<q>Eight Nobel Prizes have been awarded for work completed at Bell Lab</q>
+</aside>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;aside class=&quot;pullquote&quot;&gt;
+	&lt;q&gt;Eight Nobel Prizes have been awarded for work completed at Bell Lab&lt;/q&gt;
+&lt;/aside&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="share">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Share</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<ul class="share">
+	<li>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fharpist.surge.sh&amp;t=Bell%20Telephone%20Laboratories" target="_blank" title="Share on Facebook">
+			<svg version="1.1" x="0" y="0" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <title>Facebook Logo</title>
+        <desc>Share on Facebook</desc>
+        <path d="M17 1H3C1.9 1 1 1.9 1 3v14c0 1.1 0.9 2 2 2h7v-7H8V9.53h2V7.48c0-2.16 1.21-3.68 3.77-3.68l1.8 0v2.61h-1.2C13.38 6.4 13 7.14 13 7.84v1.69h2.57L15 12h-2v7h4c1.1 0 2-0.9 2-2V3C19 1.9 18.1 1 17 1z"></path>
+      </svg>
+		</a>
+	</li>
+	<li>
+		<a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fharpist.surge.sh&amp;text=Bell%20Telephone%20Laboratories:%20http%3A%2F%2Fharpist.surge.sh&amp;via=thatianrose" target="_blank" title="Tweet">
+			<svg version="1.1" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <title>Twitter Logo</title>
+        <desc>Share on Twitter</desc>
+        <path d="M17.316 6.246c0.008 0.2 0 0.3 0 0.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-0.625-5.787-1.697 c0.296 0 0.6 0.1 0.9 0.053c1.77 0 3.397-0.604 4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621 c0.23 0 0.5 0.1 0.7 0.066c0.345 0 0.679-0.045 0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016 0-0.031 0-0.047 c0.509 0.3 1.1 0.5 1.7 0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691 0.186-1.34 0.512-1.898 C3.942 5.5 6.7 7 9.9 7.158C9.798 6.9 9.8 6.6 9.8 6.297c0-2.084 1.689-3.773 3.774-3.773 c1.086 0 2.1 0.5 2.8 1.191c0.859-0.17 1.667-0.484 2.397-0.916c-0.282 0.881-0.881 1.621-1.66 2.1 c0.764-0.092 1.49-0.293 2.168-0.594C18.694 5.1 18.1 5.7 17.3 6.246z"></path>
+      </svg>
+		</a>
+	</li>
+	<li>
+		<a href="https://plus.google.com/share?url=http%3A%2F%2Fharpist.surge.sh" target="_blank" title="Share on Google+">
+			<svg version="1.1" x="0" y="0" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <title>Google Plus Logo</title>
+        <desc>Share on Google Plus</desc>
+        <path d="M1.99 5.59c0 1.49 0.5 2.57 1.48 3.21 0.81 0.52 1.74 0.6 2.23 0.6 0.12 0 0.21-0.01 0.28-0.01 0 0-0.15 1 0.59 2H6.53c-1.29 0-5.49 0.27-5.49 3.73 0 3.52 3.86 3.7 4.64 3.7 0.06 0 0.1 0 0.1 0 0.01 0 0.06 0 0.16 0 0.5 0 1.78-0.06 2.98-0.64 1.55-0.75 2.33-2.06 2.33-3.88 0-1.76-1.2-2.81-2.07-3.58 -0.53-0.47-0.99-0.87-0.99-1.27 0-0.4 0.34-0.7 0.76-1.08 0.69-0.61 1.34-1.49 1.34-3.15 0-1.46-0.19-2.44-1.35-3.06 0.12-0.06 0.55-0.11 0.76-0.14 0.63-0.09 1.55-0.18 1.55-0.7V1.2H6.64C6.59 1.2 1.99 1.37 1.99 5.59zM9.41 14.6c0.09 1.41-1.11 2.44-2.92 2.57 -1.83 0.14-3.34-0.69-3.43-2.1 -0.04-0.68 0.25-1.34 0.84-1.86 0.59-0.53 1.4-0.86 2.28-0.93 0.1-0.01 0.21-0.01 0.31-0.01C8.18 12.28 9.33 13.28 9.41 14.6zM8.21 4.63c0.45 1.59-0.23 3.25-1.32 3.55C6.77 8.21 6.64 8.23 6.51 8.23c-0.99 0-1.98-1.01-2.35-2.39C3.96 5.06 3.98 4.38 4.21 3.73c0.23-0.64 0.64-1.08 1.16-1.23 0.13-0.04 0.25-0.05 0.39-0.05C6.96 2.45 7.73 2.95 8.21 4.63zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8H16z"></path>
+      </svg>
+		</a>
+	</li>
+	<li>
+		<a href="mailto:?subject=Bell%20Telephone%20Laboratories%20by%20Harpist&amp;body=A%20research%20and%20scientific%20development%20company%20that%20belongs%20to%20Alcatel-Lucent.:%20http%3A%2F%2Fharpist.surge.sh" target="_blank" title="Email">
+			<svg version="1.1" id="Mail" x="0" y="0" viewBox="0 0 20 20" xml:space="preserve">
+        <title>Email Icon</title>
+        <desc>Email page link</desc>
+        <path d="M1.57 5.29c0.49 0.26 7.25 3.89 7.5 4.03C9.33 9.45 9.65 9.51 9.98 9.51c0.33 0 0.65-0.06 0.91-0.2s7.01-3.77 7.5-4.03C18.88 5.02 19.34 4 18.44 4H1.52C0.62 4 1.09 5.02 1.57 5.29zM18.61 7.49c-0.56 0.29-7.39 3.85-7.73 4.03s-0.58 0.2-0.91 0.2 -0.57-0.02-0.91-0.2S1.94 7.78 1.39 7.49C1 7.28 1 7.52 1 7.71S1 15 1 15c0 0.42 0.57 1 1 1h16c0.43 0 1-0.58 1-1 0 0 0-7.11 0-7.29S19 7.29 18.61 7.49z"></path>
+      </svg>
+		</a>
+	</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class=&quot;share&quot;&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fharpist.surge.sh&amp;amp;t=Bell%20Telephone%20Laboratories&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;
+			&lt;svg version=&quot;1.1&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+        &lt;title&gt;Facebook Logo&lt;/title&gt;
+        &lt;desc&gt;Share on Facebook&lt;/desc&gt;
+        &lt;path d=&quot;M17 1H3C1.9 1 1 1.9 1 3v14c0 1.1 0.9 2 2 2h7v-7H8V9.53h2V7.48c0-2.16 1.21-3.68 3.77-3.68l1.8 0v2.61h-1.2C13.38 6.4 13 7.14 13 7.84v1.69h2.57L15 12h-2v7h4c1.1 0 2-0.9 2-2V3C19 1.9 18.1 1 17 1z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;https://twitter.com/intent/tweet?source=http%3A%2F%2Fharpist.surge.sh&amp;amp;text=Bell%20Telephone%20Laboratories:%20http%3A%2F%2Fharpist.surge.sh&amp;amp;via=thatianrose&quot; target=&quot;_blank&quot; title=&quot;Tweet&quot;&gt;
+			&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+        &lt;title&gt;Twitter Logo&lt;/title&gt;
+        &lt;desc&gt;Share on Twitter&lt;/desc&gt;
+        &lt;path d=&quot;M17.316 6.246c0.008 0.2 0 0.3 0 0.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-0.625-5.787-1.697 c0.296 0 0.6 0.1 0.9 0.053c1.77 0 3.397-0.604 4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621 c0.23 0 0.5 0.1 0.7 0.066c0.345 0 0.679-0.045 0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016 0-0.031 0-0.047 c0.509 0.3 1.1 0.5 1.7 0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691 0.186-1.34 0.512-1.898 C3.942 5.5 6.7 7 9.9 7.158C9.798 6.9 9.8 6.6 9.8 6.297c0-2.084 1.689-3.773 3.774-3.773 c1.086 0 2.1 0.5 2.8 1.191c0.859-0.17 1.667-0.484 2.397-0.916c-0.282 0.881-0.881 1.621-1.66 2.1 c0.764-0.092 1.49-0.293 2.168-0.594C18.694 5.1 18.1 5.7 17.3 6.246z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;https://plus.google.com/share?url=http%3A%2F%2Fharpist.surge.sh&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;
+			&lt;svg version=&quot;1.1&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+        &lt;title&gt;Google Plus Logo&lt;/title&gt;
+        &lt;desc&gt;Share on Google Plus&lt;/desc&gt;
+        &lt;path d=&quot;M1.99 5.59c0 1.49 0.5 2.57 1.48 3.21 0.81 0.52 1.74 0.6 2.23 0.6 0.12 0 0.21-0.01 0.28-0.01 0 0-0.15 1 0.59 2H6.53c-1.29 0-5.49 0.27-5.49 3.73 0 3.52 3.86 3.7 4.64 3.7 0.06 0 0.1 0 0.1 0 0.01 0 0.06 0 0.16 0 0.5 0 1.78-0.06 2.98-0.64 1.55-0.75 2.33-2.06 2.33-3.88 0-1.76-1.2-2.81-2.07-3.58 -0.53-0.47-0.99-0.87-0.99-1.27 0-0.4 0.34-0.7 0.76-1.08 0.69-0.61 1.34-1.49 1.34-3.15 0-1.46-0.19-2.44-1.35-3.06 0.12-0.06 0.55-0.11 0.76-0.14 0.63-0.09 1.55-0.18 1.55-0.7V1.2H6.64C6.59 1.2 1.99 1.37 1.99 5.59zM9.41 14.6c0.09 1.41-1.11 2.44-2.92 2.57 -1.83 0.14-3.34-0.69-3.43-2.1 -0.04-0.68 0.25-1.34 0.84-1.86 0.59-0.53 1.4-0.86 2.28-0.93 0.1-0.01 0.21-0.01 0.31-0.01C8.18 12.28 9.33 13.28 9.41 14.6zM8.21 4.63c0.45 1.59-0.23 3.25-1.32 3.55C6.77 8.21 6.64 8.23 6.51 8.23c-0.99 0-1.98-1.01-2.35-2.39C3.96 5.06 3.98 4.38 4.21 3.73c0.23-0.64 0.64-1.08 1.16-1.23 0.13-0.04 0.25-0.05 0.39-0.05C6.96 2.45 7.73 2.95 8.21 4.63zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8H16z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;mailto:?subject=Bell%20Telephone%20Laboratories%20by%20Harpist&amp;amp;body=A%20research%20and%20scientific%20development%20company%20that%20belongs%20to%20Alcatel-Lucent.:%20http%3A%2F%2Fharpist.surge.sh&quot; target=&quot;_blank&quot; title=&quot;Email&quot;&gt;
+			&lt;svg version=&quot;1.1&quot; id=&quot;Mail&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+        &lt;title&gt;Email Icon&lt;/title&gt;
+        &lt;desc&gt;Email page link&lt;/desc&gt;
+        &lt;path d=&quot;M1.57 5.29c0.49 0.26 7.25 3.89 7.5 4.03C9.33 9.45 9.65 9.51 9.98 9.51c0.33 0 0.65-0.06 0.91-0.2s7.01-3.77 7.5-4.03C18.88 5.02 19.34 4 18.44 4H1.52C0.62 4 1.09 5.02 1.57 5.29zM18.61 7.49c-0.56 0.29-7.39 3.85-7.73 4.03s-0.58 0.2-0.91 0.2 -0.57-0.02-0.91-0.2S1.94 7.78 1.39 7.49C1 7.28 1 7.52 1 7.71S1 15 1 15c0 0.42 0.57 1 1 1h16c0.43 0 1-0.58 1-1 0 0 0-7.11 0-7.29S19 7.29 18.61 7.49z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="site-header">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Site Header</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<header class="site-header gutter--horizontal is-top is-down">
+	<div class="site-header__content column--2x set--center">
+		<div class="site-logo set--left"><a href="https://github.com/ianrose/storysettings">Logo</a></div>
+		<div class="site-title set--left">Site or Page Title</div>
+
+
+
+		<ul class="share set--right">
+			<li>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fharpist.surge.sh&amp;t=Bell%20Telephone%20Laboratories" target="_blank" title="Share on Facebook">
+					<svg version="1.1" x="0" y="0" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <title>Facebook Logo</title>
+        <desc>Share on Facebook</desc>
+        <path d="M17 1H3C1.9 1 1 1.9 1 3v14c0 1.1 0.9 2 2 2h7v-7H8V9.53h2V7.48c0-2.16 1.21-3.68 3.77-3.68l1.8 0v2.61h-1.2C13.38 6.4 13 7.14 13 7.84v1.69h2.57L15 12h-2v7h4c1.1 0 2-0.9 2-2V3C19 1.9 18.1 1 17 1z"></path>
+      </svg>
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fharpist.surge.sh&amp;text=Bell%20Telephone%20Laboratories:%20http%3A%2F%2Fharpist.surge.sh&amp;via=thatianrose" target="_blank" title="Tweet">
+					<svg version="1.1" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <title>Twitter Logo</title>
+        <desc>Share on Twitter</desc>
+        <path d="M17.316 6.246c0.008 0.2 0 0.3 0 0.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-0.625-5.787-1.697 c0.296 0 0.6 0.1 0.9 0.053c1.77 0 3.397-0.604 4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621 c0.23 0 0.5 0.1 0.7 0.066c0.345 0 0.679-0.045 0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016 0-0.031 0-0.047 c0.509 0.3 1.1 0.5 1.7 0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691 0.186-1.34 0.512-1.898 C3.942 5.5 6.7 7 9.9 7.158C9.798 6.9 9.8 6.6 9.8 6.297c0-2.084 1.689-3.773 3.774-3.773 c1.086 0 2.1 0.5 2.8 1.191c0.859-0.17 1.667-0.484 2.397-0.916c-0.282 0.881-0.881 1.621-1.66 2.1 c0.764-0.092 1.49-0.293 2.168-0.594C18.694 5.1 18.1 5.7 17.3 6.246z"></path>
+      </svg>
+				</a>
+			</li>
+			<li>
+				<a href="https://plus.google.com/share?url=http%3A%2F%2Fharpist.surge.sh" target="_blank" title="Share on Google+">
+					<svg version="1.1" x="0" y="0" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <title>Google Plus Logo</title>
+        <desc>Share on Google Plus</desc>
+        <path d="M1.99 5.59c0 1.49 0.5 2.57 1.48 3.21 0.81 0.52 1.74 0.6 2.23 0.6 0.12 0 0.21-0.01 0.28-0.01 0 0-0.15 1 0.59 2H6.53c-1.29 0-5.49 0.27-5.49 3.73 0 3.52 3.86 3.7 4.64 3.7 0.06 0 0.1 0 0.1 0 0.01 0 0.06 0 0.16 0 0.5 0 1.78-0.06 2.98-0.64 1.55-0.75 2.33-2.06 2.33-3.88 0-1.76-1.2-2.81-2.07-3.58 -0.53-0.47-0.99-0.87-0.99-1.27 0-0.4 0.34-0.7 0.76-1.08 0.69-0.61 1.34-1.49 1.34-3.15 0-1.46-0.19-2.44-1.35-3.06 0.12-0.06 0.55-0.11 0.76-0.14 0.63-0.09 1.55-0.18 1.55-0.7V1.2H6.64C6.59 1.2 1.99 1.37 1.99 5.59zM9.41 14.6c0.09 1.41-1.11 2.44-2.92 2.57 -1.83 0.14-3.34-0.69-3.43-2.1 -0.04-0.68 0.25-1.34 0.84-1.86 0.59-0.53 1.4-0.86 2.28-0.93 0.1-0.01 0.21-0.01 0.31-0.01C8.18 12.28 9.33 13.28 9.41 14.6zM8.21 4.63c0.45 1.59-0.23 3.25-1.32 3.55C6.77 8.21 6.64 8.23 6.51 8.23c-0.99 0-1.98-1.01-2.35-2.39C3.96 5.06 3.98 4.38 4.21 3.73c0.23-0.64 0.64-1.08 1.16-1.23 0.13-0.04 0.25-0.05 0.39-0.05C6.96 2.45 7.73 2.95 8.21 4.63zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8H16z"></path>
+      </svg>
+				</a>
+			</li>
+			<li>
+				<a href="mailto:?subject=Bell%20Telephone%20Laboratories%20by%20Harpist&amp;body=A%20research%20and%20scientific%20development%20company%20that%20belongs%20to%20Alcatel-Lucent.:%20http%3A%2F%2Fharpist.surge.sh" target="_blank" title="Email">
+					<svg version="1.1" id="Mail" x="0" y="0" viewBox="0 0 20 20" xml:space="preserve">
+        <title>Email Icon</title>
+        <desc>Email page link</desc>
+        <path d="M1.57 5.29c0.49 0.26 7.25 3.89 7.5 4.03C9.33 9.45 9.65 9.51 9.98 9.51c0.33 0 0.65-0.06 0.91-0.2s7.01-3.77 7.5-4.03C18.88 5.02 19.34 4 18.44 4H1.52C0.62 4 1.09 5.02 1.57 5.29zM18.61 7.49c-0.56 0.29-7.39 3.85-7.73 4.03s-0.58 0.2-0.91 0.2 -0.57-0.02-0.91-0.2S1.94 7.78 1.39 7.49C1 7.28 1 7.52 1 7.71S1 15 1 15c0 0.42 0.57 1 1 1h16c0.43 0 1-0.58 1-1 0 0 0-7.11 0-7.29S19 7.29 18.61 7.49z"></path>
+      </svg>
+				</a>
+			</li>
+		</ul>
+
+		<a class="site-top set--right js-top" href="#">
+			<svg version="1.1" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <title>Back to Top</title>
+        <desc>Go back to the top of this webpage</desc>
+        <path d="M10,2.5L16.5,9H13v8H7V9H3.5L10,2.5z"></path>
+      </svg>
+		</a>
+	</div>
+</header>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;header class=&quot;site-header gutter--horizontal is-top is-down&quot;&gt;
+	&lt;div class=&quot;site-header__content column--2x set--center&quot;&gt;
+		&lt;div class=&quot;site-logo set--left&quot;&gt;&lt;a href=&quot;https://github.com/ianrose/storysettings&quot;&gt;Logo&lt;/a&gt;&lt;/div&gt;
+		&lt;div class=&quot;site-title set--left&quot;&gt;Site or Page Title&lt;/div&gt;
+
+
+
+		&lt;ul class=&quot;share set--right&quot;&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fharpist.surge.sh&amp;amp;t=Bell%20Telephone%20Laboratories&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;
+					&lt;svg version=&quot;1.1&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+        &lt;title&gt;Facebook Logo&lt;/title&gt;
+        &lt;desc&gt;Share on Facebook&lt;/desc&gt;
+        &lt;path d=&quot;M17 1H3C1.9 1 1 1.9 1 3v14c0 1.1 0.9 2 2 2h7v-7H8V9.53h2V7.48c0-2.16 1.21-3.68 3.77-3.68l1.8 0v2.61h-1.2C13.38 6.4 13 7.14 13 7.84v1.69h2.57L15 12h-2v7h4c1.1 0 2-0.9 2-2V3C19 1.9 18.1 1 17 1z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;https://twitter.com/intent/tweet?source=http%3A%2F%2Fharpist.surge.sh&amp;amp;text=Bell%20Telephone%20Laboratories:%20http%3A%2F%2Fharpist.surge.sh&amp;amp;via=thatianrose&quot; target=&quot;_blank&quot; title=&quot;Tweet&quot;&gt;
+					&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+        &lt;title&gt;Twitter Logo&lt;/title&gt;
+        &lt;desc&gt;Share on Twitter&lt;/desc&gt;
+        &lt;path d=&quot;M17.316 6.246c0.008 0.2 0 0.3 0 0.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-0.625-5.787-1.697 c0.296 0 0.6 0.1 0.9 0.053c1.77 0 3.397-0.604 4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621 c0.23 0 0.5 0.1 0.7 0.066c0.345 0 0.679-0.045 0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016 0-0.031 0-0.047 c0.509 0.3 1.1 0.5 1.7 0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691 0.186-1.34 0.512-1.898 C3.942 5.5 6.7 7 9.9 7.158C9.798 6.9 9.8 6.6 9.8 6.297c0-2.084 1.689-3.773 3.774-3.773 c1.086 0 2.1 0.5 2.8 1.191c0.859-0.17 1.667-0.484 2.397-0.916c-0.282 0.881-0.881 1.621-1.66 2.1 c0.764-0.092 1.49-0.293 2.168-0.594C18.694 5.1 18.1 5.7 17.3 6.246z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;https://plus.google.com/share?url=http%3A%2F%2Fharpist.surge.sh&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;
+					&lt;svg version=&quot;1.1&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+        &lt;title&gt;Google Plus Logo&lt;/title&gt;
+        &lt;desc&gt;Share on Google Plus&lt;/desc&gt;
+        &lt;path d=&quot;M1.99 5.59c0 1.49 0.5 2.57 1.48 3.21 0.81 0.52 1.74 0.6 2.23 0.6 0.12 0 0.21-0.01 0.28-0.01 0 0-0.15 1 0.59 2H6.53c-1.29 0-5.49 0.27-5.49 3.73 0 3.52 3.86 3.7 4.64 3.7 0.06 0 0.1 0 0.1 0 0.01 0 0.06 0 0.16 0 0.5 0 1.78-0.06 2.98-0.64 1.55-0.75 2.33-2.06 2.33-3.88 0-1.76-1.2-2.81-2.07-3.58 -0.53-0.47-0.99-0.87-0.99-1.27 0-0.4 0.34-0.7 0.76-1.08 0.69-0.61 1.34-1.49 1.34-3.15 0-1.46-0.19-2.44-1.35-3.06 0.12-0.06 0.55-0.11 0.76-0.14 0.63-0.09 1.55-0.18 1.55-0.7V1.2H6.64C6.59 1.2 1.99 1.37 1.99 5.59zM9.41 14.6c0.09 1.41-1.11 2.44-2.92 2.57 -1.83 0.14-3.34-0.69-3.43-2.1 -0.04-0.68 0.25-1.34 0.84-1.86 0.59-0.53 1.4-0.86 2.28-0.93 0.1-0.01 0.21-0.01 0.31-0.01C8.18 12.28 9.33 13.28 9.41 14.6zM8.21 4.63c0.45 1.59-0.23 3.25-1.32 3.55C6.77 8.21 6.64 8.23 6.51 8.23c-0.99 0-1.98-1.01-2.35-2.39C3.96 5.06 3.98 4.38 4.21 3.73c0.23-0.64 0.64-1.08 1.16-1.23 0.13-0.04 0.25-0.05 0.39-0.05C6.96 2.45 7.73 2.95 8.21 4.63zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8H16z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;mailto:?subject=Bell%20Telephone%20Laboratories%20by%20Harpist&amp;amp;body=A%20research%20and%20scientific%20development%20company%20that%20belongs%20to%20Alcatel-Lucent.:%20http%3A%2F%2Fharpist.surge.sh&quot; target=&quot;_blank&quot; title=&quot;Email&quot;&gt;
+					&lt;svg version=&quot;1.1&quot; id=&quot;Mail&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+        &lt;title&gt;Email Icon&lt;/title&gt;
+        &lt;desc&gt;Email page link&lt;/desc&gt;
+        &lt;path d=&quot;M1.57 5.29c0.49 0.26 7.25 3.89 7.5 4.03C9.33 9.45 9.65 9.51 9.98 9.51c0.33 0 0.65-0.06 0.91-0.2s7.01-3.77 7.5-4.03C18.88 5.02 19.34 4 18.44 4H1.52C0.62 4 1.09 5.02 1.57 5.29zM18.61 7.49c-0.56 0.29-7.39 3.85-7.73 4.03s-0.58 0.2-0.91 0.2 -0.57-0.02-0.91-0.2S1.94 7.78 1.39 7.49C1 7.28 1 7.52 1 7.71S1 15 1 15c0 0.42 0.57 1 1 1h16c0.43 0 1-0.58 1-1 0 0 0-7.11 0-7.29S19 7.29 18.61 7.49z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;a class=&quot;site-top set--right js-top&quot; href=&quot;#&quot;&gt;
+			&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+        &lt;title&gt;Back to Top&lt;/title&gt;
+        &lt;desc&gt;Go back to the top of this webpage&lt;/desc&gt;
+        &lt;path d=&quot;M10,2.5L16.5,9H13v8H7V9H3.5L10,2.5z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/header&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="site-logo">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Site Logo</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<div class="site-logo">
+	<ahref="https://github.com/ianrose/storysettings">Logo</a>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;site-logo&quot;&gt;
+	&lt;ahref=&quot;https://github.com/ianrose/storysettings&quot;&gt;Logo&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="site-title">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Site Title</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<div data-sset="site-title" class="site-title set--left">Site or Page Title</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div data-sset=&quot;site-title&quot; class=&quot;site-title set--left&quot;&gt;Site or Page Title&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="site-top">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Site Top</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<a data-sset="top" class="site-top" href="#">
+	<svg version="1.1" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <title>Back to Top</title>
+        <desc>Go back to the top of this webpage</desc>
+        <path d="M10,2.5L16.5,9H13v8H7V9H3.5L10,2.5z"></path>
+      </svg>
+</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a data-sset=&quot;top&quot; class=&quot;site-top&quot; href=&quot;#&quot;&gt;
+	&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+        &lt;title&gt;Back to Top&lt;/title&gt;
+        &lt;desc&gt;Go back to the top of this webpage&lt;/desc&gt;
+        &lt;path d=&quot;M10,2.5L16.5,9H13v8H7V9H3.5L10,2.5z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+&lt;/a&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="tombstone">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Tombstone</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-preview">
+	<p class="tombstone">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ornare ligula vulputate tellus ornare, id scelerisque tellus eleifend.</p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p class=&quot;tombstone&quot;&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ornare ligula vulputate tellus ornare, id scelerisque tellus eleifend.&lt;/p&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/1.4.0/lazysizes.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+	<script src="http://vjs.zencdn.net/5.6.0/video.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.0.8/Youtube.min.js"></script>
+
+		</div>
+	<script src="/assets/fabricator/scripts/f.js"></script>
+
+	<!-- toolkit scripts -->
+	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+	<!-- /toolkit scripts -->
+
+</body>
+</html>
