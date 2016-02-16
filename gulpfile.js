@@ -53,7 +53,7 @@ gulp.task('styles:fabricator', function () {
 	gulp.src(config.src.styles.fabricator)
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(prefix('last 1 version'))
+		.pipe(prefix('last 3 versions'))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(rename('f.css'))
 		.pipe(sourcemaps.write())
@@ -65,7 +65,7 @@ gulp.task('styles:toolkit', function () {
 	gulp.src(config.src.styles.toolkit)
 		.pipe(gulpif(config.dev, sourcemaps.init()))
 		.pipe(sass().on('error', sass.logError))
-		.pipe(prefix('last 1 version'))
+		.pipe(prefix('last 3 versions'))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(gulpif(config.dev, sourcemaps.write()))
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
@@ -122,7 +122,8 @@ gulp.task('serve', function () {
 			baseDir: config.dest
 		},
 		notify: false,
-		logPrefix: 'FABRICATOR'
+		open: false,
+		logPrefix: 'Storysettings'
 	});
 
 	/**
