@@ -10,13 +10,13 @@
 
 ## Demo
 
-#### [Read the docs →](http://storysettings.surge.sh/examples/longform.html)
+#### [Longform Example →](http://storysettings.surge.sh/examples/longform.html)
 
 ####
 
 ## Credits
 
-[Documentation Built with](http://fbrctr.github.io/)
+[Documentation Built with Fabricator](http://fbrctr.github.io/)
 
 ## License
 
