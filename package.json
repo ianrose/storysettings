@@ -6,9 +6,9 @@
   "homepage": "http://fbrctr.github.io/",
   "main": "README.md",
   "scripts": {
-    "gulp": "gulp",
     "prestart": "npm install",
-    "build": "npm install && gulp",
+    "build": "gulp",
+    "postbuild": "npm run deploy",
     "start": "gulp --dev",
     "dev": "gulp --dev",
     "postinstall": "bower install",
