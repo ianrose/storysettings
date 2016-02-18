@@ -304,14 +304,31 @@ ga('send', 'pageview');
 &lt;/html&gt;
 </code></pre>
 
-<h3>Using Storysettings</h3>
+<h3>Using Default Storysettings</h3>
 
 <p>Storysettings is made of up of <a href="/components.html">Components</a>, <a href="/layout.html">Layout</a>, <a href="/utilities.html">Utilities</a>, <a href="/states.html">States</a>, and <a href="base.html">Base</a>. As you are building your story use those parts to design it with your content.</p>
 
 <p>You can see how you can use Storysettings in this <a href="/examples/longform.html">example</a>.</p>
 
-<h2>Sass</h2>
-<p>If you prefer to customize Storysettings you can download this repository and modify <code>/src/assets/toolkit/styles/_config.scss</code> and output a new <code>toolkit.css</code> or install using <a href="http://bower.io/">Bower</a>.</p>
+<h2>Setup with Sass</h2>
+<p>There are three ways you can download Storysettings which lives in the <code>src</code> folder.</p>
+<ul>
+	<li>Download the latest release</li>
+	<li>Clone the repo: <code>git clone https://github.com/ianrose/storysettings.git</code></li>
+	<li>Install with Bower: <code>bower install storysettings --save-dev</code></li>
+</ul>
+
+<p>To start using Storysettings <code>@import</code> the <code>_storysettings.scss</code> partial into your Sass project after the import of <code>_typesettings.scss</code></p>
+
+<pre><code class="language-css">// Storysettings vars and your vars
+@import 'path/your-config';
+
+// Importing the dependency typesettings
+@import 'path/typesettings';
+
+// Importing the Storysettings partial
+@import `path/storysettings`;
+</code></pre>
 
 <h3>Default Colors</h3>
 
