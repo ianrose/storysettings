@@ -23,7 +23,7 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
+  "dependencies": {
     "typesettings": "^3.0.1"
   }
 }
