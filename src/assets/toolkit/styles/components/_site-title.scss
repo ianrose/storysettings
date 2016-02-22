@@ -1,7 +1,7 @@
 .site-title {
   display: none;
   font-family: $font-sans;
-  line-height: 1.25;
+  line-height: $site-header-height;
   margin-right: $gutter;
 
   @media (min-width: $screen-sm-min) {

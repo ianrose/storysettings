@@ -1,7 +1,17 @@
 .site-top {
   display: none;
-  height: 18px;
-  width: 18px;
+  line-height: $site-header-height;
+
+  a {
+    display: block;
+    line-height: $site-header-height;
+  }
+
+  svg {
+    height: 18px;
+    vertical-align: middle;
+    width: 18px;
+  }
 
   @media (min-width: $screen-sm-min) {
     margin-right: $gutter;

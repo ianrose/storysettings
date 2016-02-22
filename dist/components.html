@@ -750,116 +750,120 @@
 			</span>
 		</div>
 	</div><div class="f-item-preview">
-	<header class="site-header gutter--horizontal is-top is-down">
+	<div class="progress">
+	<div class="progress__bar" data-sset="progress"></div>
+</div>
+<header id="js-site-header" class="site-header gutter--horizontal" data-sset="site-header">
 	<div class="site-header__content column--2x set--center">
-		<div class="site-logo set--left"><a href="https://github.com/ianrose/storysettings">Logo</a></div>
-		<div class="site-title set--left">Site or Page Title</div>
-
-
-
+		<div class="site-logo set--left"><a href="/">S</a></div>
+		<div id="js-site-title" class="site-title set--left is-hidden" data-sset="site-title">Story Title</div>
 		<ul class="share set--right">
 			<li>
 				<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fharpist.surge.sh&amp;t=Bell%20Telephone%20Laboratories" target="_blank" title="Share on Facebook">
 					<svg version="1.1" x="0" y="0" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-        <title>Facebook Logo</title>
-        <desc>Share on Facebook</desc>
-        <path d="M17 1H3C1.9 1 1 1.9 1 3v14c0 1.1 0.9 2 2 2h7v-7H8V9.53h2V7.48c0-2.16 1.21-3.68 3.77-3.68l1.8 0v2.61h-1.2C13.38 6.4 13 7.14 13 7.84v1.69h2.57L15 12h-2v7h4c1.1 0 2-0.9 2-2V3C19 1.9 18.1 1 17 1z"></path>
-      </svg>
+            <title>Facebook Logo</title>
+            <desc>Share on Facebook</desc>
+            <path d="M17 1H3C1.9 1 1 1.9 1 3v14c0 1.1 0.9 2 2 2h7v-7H8V9.53h2V7.48c0-2.16 1.21-3.68 3.77-3.68l1.8 0v2.61h-1.2C13.38 6.4 13 7.14 13 7.84v1.69h2.57L15 12h-2v7h4c1.1 0 2-0.9 2-2V3C19 1.9 18.1 1 17 1z"></path>
+          </svg>
 				</a>
 			</li>
 			<li>
 				<a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fharpist.surge.sh&amp;text=Bell%20Telephone%20Laboratories:%20http%3A%2F%2Fharpist.surge.sh&amp;via=thatianrose" target="_blank" title="Tweet">
 					<svg version="1.1" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-        <title>Twitter Logo</title>
-        <desc>Share on Twitter</desc>
-        <path d="M17.316 6.246c0.008 0.2 0 0.3 0 0.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-0.625-5.787-1.697 c0.296 0 0.6 0.1 0.9 0.053c1.77 0 3.397-0.604 4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621 c0.23 0 0.5 0.1 0.7 0.066c0.345 0 0.679-0.045 0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016 0-0.031 0-0.047 c0.509 0.3 1.1 0.5 1.7 0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691 0.186-1.34 0.512-1.898 C3.942 5.5 6.7 7 9.9 7.158C9.798 6.9 9.8 6.6 9.8 6.297c0-2.084 1.689-3.773 3.774-3.773 c1.086 0 2.1 0.5 2.8 1.191c0.859-0.17 1.667-0.484 2.397-0.916c-0.282 0.881-0.881 1.621-1.66 2.1 c0.764-0.092 1.49-0.293 2.168-0.594C18.694 5.1 18.1 5.7 17.3 6.246z"></path>
-      </svg>
+            <title>Twitter Logo</title>
+            <desc>Share on Twitter</desc>
+            <path d="M17.316 6.246c0.008 0.2 0 0.3 0 0.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-0.625-5.787-1.697 c0.296 0 0.6 0.1 0.9 0.053c1.77 0 3.397-0.604 4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621 c0.23 0 0.5 0.1 0.7 0.066c0.345 0 0.679-0.045 0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016 0-0.031 0-0.047 c0.509 0.3 1.1 0.5 1.7 0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691 0.186-1.34 0.512-1.898 C3.942 5.5 6.7 7 9.9 7.158C9.798 6.9 9.8 6.6 9.8 6.297c0-2.084 1.689-3.773 3.774-3.773 c1.086 0 2.1 0.5 2.8 1.191c0.859-0.17 1.667-0.484 2.397-0.916c-0.282 0.881-0.881 1.621-1.66 2.1 c0.764-0.092 1.49-0.293 2.168-0.594C18.694 5.1 18.1 5.7 17.3 6.246z"></path>
+          </svg>
 				</a>
 			</li>
 			<li>
 				<a href="https://plus.google.com/share?url=http%3A%2F%2Fharpist.surge.sh" target="_blank" title="Share on Google+">
 					<svg version="1.1" x="0" y="0" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-        <title>Google Plus Logo</title>
-        <desc>Share on Google Plus</desc>
-        <path d="M1.99 5.59c0 1.49 0.5 2.57 1.48 3.21 0.81 0.52 1.74 0.6 2.23 0.6 0.12 0 0.21-0.01 0.28-0.01 0 0-0.15 1 0.59 2H6.53c-1.29 0-5.49 0.27-5.49 3.73 0 3.52 3.86 3.7 4.64 3.7 0.06 0 0.1 0 0.1 0 0.01 0 0.06 0 0.16 0 0.5 0 1.78-0.06 2.98-0.64 1.55-0.75 2.33-2.06 2.33-3.88 0-1.76-1.2-2.81-2.07-3.58 -0.53-0.47-0.99-0.87-0.99-1.27 0-0.4 0.34-0.7 0.76-1.08 0.69-0.61 1.34-1.49 1.34-3.15 0-1.46-0.19-2.44-1.35-3.06 0.12-0.06 0.55-0.11 0.76-0.14 0.63-0.09 1.55-0.18 1.55-0.7V1.2H6.64C6.59 1.2 1.99 1.37 1.99 5.59zM9.41 14.6c0.09 1.41-1.11 2.44-2.92 2.57 -1.83 0.14-3.34-0.69-3.43-2.1 -0.04-0.68 0.25-1.34 0.84-1.86 0.59-0.53 1.4-0.86 2.28-0.93 0.1-0.01 0.21-0.01 0.31-0.01C8.18 12.28 9.33 13.28 9.41 14.6zM8.21 4.63c0.45 1.59-0.23 3.25-1.32 3.55C6.77 8.21 6.64 8.23 6.51 8.23c-0.99 0-1.98-1.01-2.35-2.39C3.96 5.06 3.98 4.38 4.21 3.73c0.23-0.64 0.64-1.08 1.16-1.23 0.13-0.04 0.25-0.05 0.39-0.05C6.96 2.45 7.73 2.95 8.21 4.63zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8H16z"></path>
-      </svg>
+            <title>Google Plus Logo</title>
+            <desc>Share on Google Plus</desc>
+            <path d="M1.99 5.59c0 1.49 0.5 2.57 1.48 3.21 0.81 0.52 1.74 0.6 2.23 0.6 0.12 0 0.21-0.01 0.28-0.01 0 0-0.15 1 0.59 2H6.53c-1.29 0-5.49 0.27-5.49 3.73 0 3.52 3.86 3.7 4.64 3.7 0.06 0 0.1 0 0.1 0 0.01 0 0.06 0 0.16 0 0.5 0 1.78-0.06 2.98-0.64 1.55-0.75 2.33-2.06 2.33-3.88 0-1.76-1.2-2.81-2.07-3.58 -0.53-0.47-0.99-0.87-0.99-1.27 0-0.4 0.34-0.7 0.76-1.08 0.69-0.61 1.34-1.49 1.34-3.15 0-1.46-0.19-2.44-1.35-3.06 0.12-0.06 0.55-0.11 0.76-0.14 0.63-0.09 1.55-0.18 1.55-0.7V1.2H6.64C6.59 1.2 1.99 1.37 1.99 5.59zM9.41 14.6c0.09 1.41-1.11 2.44-2.92 2.57 -1.83 0.14-3.34-0.69-3.43-2.1 -0.04-0.68 0.25-1.34 0.84-1.86 0.59-0.53 1.4-0.86 2.28-0.93 0.1-0.01 0.21-0.01 0.31-0.01C8.18 12.28 9.33 13.28 9.41 14.6zM8.21 4.63c0.45 1.59-0.23 3.25-1.32 3.55C6.77 8.21 6.64 8.23 6.51 8.23c-0.99 0-1.98-1.01-2.35-2.39C3.96 5.06 3.98 4.38 4.21 3.73c0.23-0.64 0.64-1.08 1.16-1.23 0.13-0.04 0.25-0.05 0.39-0.05C6.96 2.45 7.73 2.95 8.21 4.63zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8H16z"></path>
+          </svg>
 				</a>
 			</li>
 			<li>
 				<a href="mailto:?subject=Bell%20Telephone%20Laboratories%20by%20Harpist&amp;body=A%20research%20and%20scientific%20development%20company%20that%20belongs%20to%20Alcatel-Lucent.:%20http%3A%2F%2Fharpist.surge.sh" target="_blank" title="Email">
 					<svg version="1.1" id="Mail" x="0" y="0" viewBox="0 0 20 20" xml:space="preserve">
-        <title>Email Icon</title>
-        <desc>Email page link</desc>
-        <path d="M1.57 5.29c0.49 0.26 7.25 3.89 7.5 4.03C9.33 9.45 9.65 9.51 9.98 9.51c0.33 0 0.65-0.06 0.91-0.2s7.01-3.77 7.5-4.03C18.88 5.02 19.34 4 18.44 4H1.52C0.62 4 1.09 5.02 1.57 5.29zM18.61 7.49c-0.56 0.29-7.39 3.85-7.73 4.03s-0.58 0.2-0.91 0.2 -0.57-0.02-0.91-0.2S1.94 7.78 1.39 7.49C1 7.28 1 7.52 1 7.71S1 15 1 15c0 0.42 0.57 1 1 1h16c0.43 0 1-0.58 1-1 0 0 0-7.11 0-7.29S19 7.29 18.61 7.49z"></path>
-      </svg>
+            <title>Email Icon</title>
+            <desc>Email page link</desc>
+            <path d="M1.57 5.29c0.49 0.26 7.25 3.89 7.5 4.03C9.33 9.45 9.65 9.51 9.98 9.51c0.33 0 0.65-0.06 0.91-0.2s7.01-3.77 7.5-4.03C18.88 5.02 19.34 4 18.44 4H1.52C0.62 4 1.09 5.02 1.57 5.29zM18.61 7.49c-0.56 0.29-7.39 3.85-7.73 4.03s-0.58 0.2-0.91 0.2 -0.57-0.02-0.91-0.2S1.94 7.78 1.39 7.49C1 7.28 1 7.52 1 7.71S1 15 1 15c0 0.42 0.57 1 1 1h16c0.43 0 1-0.58 1-1 0 0 0-7.11 0-7.29S19 7.29 18.61 7.49z"></path>
+          </svg>
 				</a>
 			</li>
 		</ul>
-
-		<a class="site-top set--right js-top" href="#">
-			<svg version="1.1" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+		<div class="site-top set--right">
+			<a href="#" data-sset="top">
+				<svg version="1.1" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
         <title>Back to Top</title>
         <desc>Go back to the top of this webpage</desc>
         <path d="M10,2.5L16.5,9H13v8H7V9H3.5L10,2.5z"></path>
       </svg>
-		</a>
+			</a>
+		</div>
+
 	</div>
 </header>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;header class=&quot;site-header gutter--horizontal is-top is-down&quot;&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;progress&quot;&gt;
+	&lt;div class=&quot;progress__bar&quot; data-sset=&quot;progress&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;header id=&quot;js-site-header&quot; class=&quot;site-header gutter--horizontal&quot; data-sset=&quot;site-header&quot;&gt;
 	&lt;div class=&quot;site-header__content column--2x set--center&quot;&gt;
-		&lt;div class=&quot;site-logo set--left&quot;&gt;&lt;a href=&quot;https://github.com/ianrose/storysettings&quot;&gt;Logo&lt;/a&gt;&lt;/div&gt;
-		&lt;div class=&quot;site-title set--left&quot;&gt;Site or Page Title&lt;/div&gt;
-
-
-
+		&lt;div class=&quot;site-logo set--left&quot;&gt;&lt;a href=&quot;/&quot;&gt;S&lt;/a&gt;&lt;/div&gt;
+		&lt;div id=&quot;js-site-title&quot; class=&quot;site-title set--left is-hidden&quot; data-sset=&quot;site-title&quot;&gt;Story Title&lt;/div&gt;
 		&lt;ul class=&quot;share set--right&quot;&gt;
 			&lt;li&gt;
 				&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fharpist.surge.sh&amp;amp;t=Bell%20Telephone%20Laboratories&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;
 					&lt;svg version=&quot;1.1&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
-        &lt;title&gt;Facebook Logo&lt;/title&gt;
-        &lt;desc&gt;Share on Facebook&lt;/desc&gt;
-        &lt;path d=&quot;M17 1H3C1.9 1 1 1.9 1 3v14c0 1.1 0.9 2 2 2h7v-7H8V9.53h2V7.48c0-2.16 1.21-3.68 3.77-3.68l1.8 0v2.61h-1.2C13.38 6.4 13 7.14 13 7.84v1.69h2.57L15 12h-2v7h4c1.1 0 2-0.9 2-2V3C19 1.9 18.1 1 17 1z&quot;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+            &lt;title&gt;Facebook Logo&lt;/title&gt;
+            &lt;desc&gt;Share on Facebook&lt;/desc&gt;
+            &lt;path d=&quot;M17 1H3C1.9 1 1 1.9 1 3v14c0 1.1 0.9 2 2 2h7v-7H8V9.53h2V7.48c0-2.16 1.21-3.68 3.77-3.68l1.8 0v2.61h-1.2C13.38 6.4 13 7.14 13 7.84v1.69h2.57L15 12h-2v7h4c1.1 0 2-0.9 2-2V3C19 1.9 18.1 1 17 1z&quot;&gt;&lt;/path&gt;
+          &lt;/svg&gt;
 				&lt;/a&gt;
 			&lt;/li&gt;
 			&lt;li&gt;
 				&lt;a href=&quot;https://twitter.com/intent/tweet?source=http%3A%2F%2Fharpist.surge.sh&amp;amp;text=Bell%20Telephone%20Laboratories:%20http%3A%2F%2Fharpist.surge.sh&amp;amp;via=thatianrose&quot; target=&quot;_blank&quot; title=&quot;Tweet&quot;&gt;
 					&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
-        &lt;title&gt;Twitter Logo&lt;/title&gt;
-        &lt;desc&gt;Share on Twitter&lt;/desc&gt;
-        &lt;path d=&quot;M17.316 6.246c0.008 0.2 0 0.3 0 0.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-0.625-5.787-1.697 c0.296 0 0.6 0.1 0.9 0.053c1.77 0 3.397-0.604 4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621 c0.23 0 0.5 0.1 0.7 0.066c0.345 0 0.679-0.045 0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016 0-0.031 0-0.047 c0.509 0.3 1.1 0.5 1.7 0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691 0.186-1.34 0.512-1.898 C3.942 5.5 6.7 7 9.9 7.158C9.798 6.9 9.8 6.6 9.8 6.297c0-2.084 1.689-3.773 3.774-3.773 c1.086 0 2.1 0.5 2.8 1.191c0.859-0.17 1.667-0.484 2.397-0.916c-0.282 0.881-0.881 1.621-1.66 2.1 c0.764-0.092 1.49-0.293 2.168-0.594C18.694 5.1 18.1 5.7 17.3 6.246z&quot;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+            &lt;title&gt;Twitter Logo&lt;/title&gt;
+            &lt;desc&gt;Share on Twitter&lt;/desc&gt;
+            &lt;path d=&quot;M17.316 6.246c0.008 0.2 0 0.3 0 0.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-0.625-5.787-1.697 c0.296 0 0.6 0.1 0.9 0.053c1.77 0 3.397-0.604 4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621 c0.23 0 0.5 0.1 0.7 0.066c0.345 0 0.679-0.045 0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016 0-0.031 0-0.047 c0.509 0.3 1.1 0.5 1.7 0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691 0.186-1.34 0.512-1.898 C3.942 5.5 6.7 7 9.9 7.158C9.798 6.9 9.8 6.6 9.8 6.297c0-2.084 1.689-3.773 3.774-3.773 c1.086 0 2.1 0.5 2.8 1.191c0.859-0.17 1.667-0.484 2.397-0.916c-0.282 0.881-0.881 1.621-1.66 2.1 c0.764-0.092 1.49-0.293 2.168-0.594C18.694 5.1 18.1 5.7 17.3 6.246z&quot;&gt;&lt;/path&gt;
+          &lt;/svg&gt;
 				&lt;/a&gt;
 			&lt;/li&gt;
 			&lt;li&gt;
 				&lt;a href=&quot;https://plus.google.com/share?url=http%3A%2F%2Fharpist.surge.sh&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;
 					&lt;svg version=&quot;1.1&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
-        &lt;title&gt;Google Plus Logo&lt;/title&gt;
-        &lt;desc&gt;Share on Google Plus&lt;/desc&gt;
-        &lt;path d=&quot;M1.99 5.59c0 1.49 0.5 2.57 1.48 3.21 0.81 0.52 1.74 0.6 2.23 0.6 0.12 0 0.21-0.01 0.28-0.01 0 0-0.15 1 0.59 2H6.53c-1.29 0-5.49 0.27-5.49 3.73 0 3.52 3.86 3.7 4.64 3.7 0.06 0 0.1 0 0.1 0 0.01 0 0.06 0 0.16 0 0.5 0 1.78-0.06 2.98-0.64 1.55-0.75 2.33-2.06 2.33-3.88 0-1.76-1.2-2.81-2.07-3.58 -0.53-0.47-0.99-0.87-0.99-1.27 0-0.4 0.34-0.7 0.76-1.08 0.69-0.61 1.34-1.49 1.34-3.15 0-1.46-0.19-2.44-1.35-3.06 0.12-0.06 0.55-0.11 0.76-0.14 0.63-0.09 1.55-0.18 1.55-0.7V1.2H6.64C6.59 1.2 1.99 1.37 1.99 5.59zM9.41 14.6c0.09 1.41-1.11 2.44-2.92 2.57 -1.83 0.14-3.34-0.69-3.43-2.1 -0.04-0.68 0.25-1.34 0.84-1.86 0.59-0.53 1.4-0.86 2.28-0.93 0.1-0.01 0.21-0.01 0.31-0.01C8.18 12.28 9.33 13.28 9.41 14.6zM8.21 4.63c0.45 1.59-0.23 3.25-1.32 3.55C6.77 8.21 6.64 8.23 6.51 8.23c-0.99 0-1.98-1.01-2.35-2.39C3.96 5.06 3.98 4.38 4.21 3.73c0.23-0.64 0.64-1.08 1.16-1.23 0.13-0.04 0.25-0.05 0.39-0.05C6.96 2.45 7.73 2.95 8.21 4.63zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8H16z&quot;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+            &lt;title&gt;Google Plus Logo&lt;/title&gt;
+            &lt;desc&gt;Share on Google Plus&lt;/desc&gt;
+            &lt;path d=&quot;M1.99 5.59c0 1.49 0.5 2.57 1.48 3.21 0.81 0.52 1.74 0.6 2.23 0.6 0.12 0 0.21-0.01 0.28-0.01 0 0-0.15 1 0.59 2H6.53c-1.29 0-5.49 0.27-5.49 3.73 0 3.52 3.86 3.7 4.64 3.7 0.06 0 0.1 0 0.1 0 0.01 0 0.06 0 0.16 0 0.5 0 1.78-0.06 2.98-0.64 1.55-0.75 2.33-2.06 2.33-3.88 0-1.76-1.2-2.81-2.07-3.58 -0.53-0.47-0.99-0.87-0.99-1.27 0-0.4 0.34-0.7 0.76-1.08 0.69-0.61 1.34-1.49 1.34-3.15 0-1.46-0.19-2.44-1.35-3.06 0.12-0.06 0.55-0.11 0.76-0.14 0.63-0.09 1.55-0.18 1.55-0.7V1.2H6.64C6.59 1.2 1.99 1.37 1.99 5.59zM9.41 14.6c0.09 1.41-1.11 2.44-2.92 2.57 -1.83 0.14-3.34-0.69-3.43-2.1 -0.04-0.68 0.25-1.34 0.84-1.86 0.59-0.53 1.4-0.86 2.28-0.93 0.1-0.01 0.21-0.01 0.31-0.01C8.18 12.28 9.33 13.28 9.41 14.6zM8.21 4.63c0.45 1.59-0.23 3.25-1.32 3.55C6.77 8.21 6.64 8.23 6.51 8.23c-0.99 0-1.98-1.01-2.35-2.39C3.96 5.06 3.98 4.38 4.21 3.73c0.23-0.64 0.64-1.08 1.16-1.23 0.13-0.04 0.25-0.05 0.39-0.05C6.96 2.45 7.73 2.95 8.21 4.63zM16 8V5h-2v3h-3v2h3v3h2v-3h3V8H16z&quot;&gt;&lt;/path&gt;
+          &lt;/svg&gt;
 				&lt;/a&gt;
 			&lt;/li&gt;
 			&lt;li&gt;
 				&lt;a href=&quot;mailto:?subject=Bell%20Telephone%20Laboratories%20by%20Harpist&amp;amp;body=A%20research%20and%20scientific%20development%20company%20that%20belongs%20to%20Alcatel-Lucent.:%20http%3A%2F%2Fharpist.surge.sh&quot; target=&quot;_blank&quot; title=&quot;Email&quot;&gt;
 					&lt;svg version=&quot;1.1&quot; id=&quot;Mail&quot; x=&quot;0&quot; y=&quot;0&quot; viewBox=&quot;0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
-        &lt;title&gt;Email Icon&lt;/title&gt;
-        &lt;desc&gt;Email page link&lt;/desc&gt;
-        &lt;path d=&quot;M1.57 5.29c0.49 0.26 7.25 3.89 7.5 4.03C9.33 9.45 9.65 9.51 9.98 9.51c0.33 0 0.65-0.06 0.91-0.2s7.01-3.77 7.5-4.03C18.88 5.02 19.34 4 18.44 4H1.52C0.62 4 1.09 5.02 1.57 5.29zM18.61 7.49c-0.56 0.29-7.39 3.85-7.73 4.03s-0.58 0.2-0.91 0.2 -0.57-0.02-0.91-0.2S1.94 7.78 1.39 7.49C1 7.28 1 7.52 1 7.71S1 15 1 15c0 0.42 0.57 1 1 1h16c0.43 0 1-0.58 1-1 0 0 0-7.11 0-7.29S19 7.29 18.61 7.49z&quot;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+            &lt;title&gt;Email Icon&lt;/title&gt;
+            &lt;desc&gt;Email page link&lt;/desc&gt;
+            &lt;path d=&quot;M1.57 5.29c0.49 0.26 7.25 3.89 7.5 4.03C9.33 9.45 9.65 9.51 9.98 9.51c0.33 0 0.65-0.06 0.91-0.2s7.01-3.77 7.5-4.03C18.88 5.02 19.34 4 18.44 4H1.52C0.62 4 1.09 5.02 1.57 5.29zM18.61 7.49c-0.56 0.29-7.39 3.85-7.73 4.03s-0.58 0.2-0.91 0.2 -0.57-0.02-0.91-0.2S1.94 7.78 1.39 7.49C1 7.28 1 7.52 1 7.71S1 15 1 15c0 0.42 0.57 1 1 1h16c0.43 0 1-0.58 1-1 0 0 0-7.11 0-7.29S19 7.29 18.61 7.49z&quot;&gt;&lt;/path&gt;
+          &lt;/svg&gt;
 				&lt;/a&gt;
 			&lt;/li&gt;
 		&lt;/ul&gt;
-
-		&lt;a class=&quot;site-top set--right js-top&quot; href=&quot;#&quot;&gt;
-			&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
+		&lt;div class=&quot;site-top set--right&quot;&gt;
+			&lt;a href=&quot;#&quot; data-sset=&quot;top&quot;&gt;
+				&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 20 20&quot; enable-background=&quot;new 0 0 20 20&quot; xml:space=&quot;preserve&quot;&gt;
         &lt;title&gt;Back to Top&lt;/title&gt;
         &lt;desc&gt;Go back to the top of this webpage&lt;/desc&gt;
         &lt;path d=&quot;M10,2.5L16.5,9H13v8H7V9H3.5L10,2.5z&quot;&gt;&lt;/path&gt;
       &lt;/svg&gt;
-		&lt;/a&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+
 	&lt;/div&gt;
 &lt;/header&gt;</code></pre>
 </div>
