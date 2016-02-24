@@ -24,11 +24,11 @@
       &:nth-of-type(1) {
         padding-right: $gutter / 2;
       }
-    }  
+    }
   }
 }
 
-.media__video-embed {
+.media--video-embed {
   @extend .ratio--16x9;
   @extend .intrinsic;
   width: 100%;
