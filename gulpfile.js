@@ -24,13 +24,13 @@ var config = {
 	src: {
 		scripts: {
 			fabricator: './src/assets/fabricator/scripts/fabricator.js',
-			toolkit: './src/assets/toolkit/scripts/toolkit.js'
+			toolkit: './src/assets/storysettings/scripts/toolkit.js'
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
+			toolkit: 'src/assets/storysettings/styles/toolkit.scss'
 		},
-		images: 'src/assets/toolkit/images/**/*',
+		images: 'src/assets/storysettings/images/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
 	dest: 'dist'
@@ -68,7 +68,7 @@ gulp.task('styles:toolkit', function () {
 		.pipe(prefix('last 3 versions'))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(gulpif(config.dev, sourcemaps.write()))
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
+		.pipe(gulp.dest(config.dest + '/assets/storysettings/styles'))
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
@@ -96,7 +96,7 @@ gulp.task('scripts', function (done) {
 gulp.task('images', ['favicon'], function () {
 	return gulp.src(config.src.images)
 		.pipe(imagemin())
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
+		.pipe(gulp.dest(config.dest + '/assets/storysettings/images'));
 });
 
 gulp.task('favicon', function () {
@@ -152,7 +152,7 @@ gulp.task('serve', function () {
 	gulp.watch('src/assets/fabricator/styles/**/*.scss', ['styles:fabricator:watch']);
 
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
-	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
+	gulp.watch('src/assets/storysettings/styles/**/*.scss', ['styles:toolkit:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
 	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
