@@ -1,7 +1,11 @@
 {
   "name": "Storysettings",
   "description": "A tool for building stories on the web",
-  "main": "README.md",
+  "main": [
+    "./dist/assets/storysettings/styles/toolkit.css",
+    "./dist/assets/storysettings/scripts/toolkit.js",
+    "./src/assets/storysettings/styles/_storysettings.scss"
+  ],
   "authors": [
     "Ian Rose"
   ],
