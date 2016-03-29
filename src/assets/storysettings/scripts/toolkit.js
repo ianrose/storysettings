@@ -6,6 +6,9 @@
 // be triggered. The function will be called after it stops being called for
 // N milliseconds. If `immediate` is passed, trigger the function on the
 // leading edge, instead of the trailing.
+var zoom = require('./zoom');
+var transition = require('./transition');
+
 function debounce(func, wait, immediate) {
   'use strict';
 
@@ -149,4 +152,6 @@ $(document).ready(function(){
   }, {
     offset: 'bottom-in-view'
   });
+  transition.init();
+   zoom.init();
 });
