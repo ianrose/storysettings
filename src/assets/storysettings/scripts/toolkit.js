@@ -6,6 +6,8 @@
 // be triggered. The function will be called after it stops being called for
 // N milliseconds. If `immediate` is passed, trigger the function on the
 // leading edge, instead of the trailing.
+var photoswipe = require('./photoswipe');
+
 function debounce(func, wait, immediate) {
   'use strict';
 
@@ -46,6 +48,7 @@ $(document).ready(function(){
     });
   });
 
+  // Animate Anchor Links
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
@@ -149,4 +152,6 @@ $(document).ready(function(){
   }, {
     offset: 'bottom-in-view'
   });
+
+  photoswipe.init();
 });

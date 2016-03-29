@@ -8,6 +8,8 @@
 
 	<title>Longform Example | Storysettings</title>
 	<link href="http://vjs.zencdn.net/5.6.0/video-js.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" rel="stylesheet">
 	
 	<!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->
 	<!-- toolkit styles -->
@@ -105,12 +107,77 @@
         in their degree, some time or other, cherish very nearly the same feelings
         towards the ocean with me.
       </p>
-      <div class="column--2x set--center">
+
+  <div data-sset="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure class="media" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl">
+          <img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption  1</figcaption>
+
+    </figure>
+
+    <figure class="is-hidden" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
+          <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption 2</figcaption>
+    </figure>
+
+  </div>
+
+    <div data-sset="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+      <figure class="media" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl">
+            <img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">Image caption  1</figcaption>
+
+      </figure>
+
+      <figure class="is-hidde" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
+            <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">Image caption 2</figcaption>
+      </figure>
+
+    </div>
+
+      <div class="column--2x set--center" data-sset="gallery">
         <figure class="media media--diptic">
             <img src="http://placehold.it/800x150">
             <img src="http://placehold.it/800x150">
           <figcaption>Caption</figcaption>
         </figure>
+      </div>
+      <div class="align--center">
+        <h3>All Episodes</h3>
+        <p>test</p>
+      </div>
+      <div class="column--2x set--center">
+        <div class="column--half set--left gutter--horizontal">
+          <h3>Episode 1</h3>
+          <img style="max-width: 100%" src="http://placehold.it/1280x720">
+          <p>There now is your insular city of the Manhattoes, belted round by wharves as Indian isles by coral reefs—commerce surrounds it with her surf. Right and left, the streets take you waterward. Its extreme downtown is the battery, where that noble mole is washed by waves, and cooled by breezes, which a few hours previous were out of sight of land. Look at the crowds of water-gazers there.</p>
+        </div>
+        <div class="column--half set--left gutter--horizontal">
+          <h3>Episode 1</h3>
+          <img style="max-width: 100%" src="http://placehold.it/1280x720">
+          <p>There now is your insular city of the Manhattoes, belted round by wharves as Indian isles by coral reefs—commerce surrounds it with her surf. Right and left, the streets take you waterward. Its extreme downtown is the battery, where that noble mole is washed by waves, and cooled by breezes, which a few hours previous were out of sight of land. Look at the crowds of water-gazers there.</p>
+        </div>
+                <div class="column--half set--left gutter--horizontal">
+                  <h3>Episode 1</h3>
+                  <img style="max-width: 100%" src="http://placehold.it/1280x720">
+                  <p>There now is your insular city of the Manhattoes, belted round by wharves as Indian isles by coral reefs—commerce surrounds it with her surf. Right and left, the streets take you waterward. Its extreme downtown is the battery, where that noble mole is washed by waves, and cooled by breezes, which a few hours previous were out of sight of land. Look at the crowds of water-gazers there.</p>
+                </div>
+                <div class="column--half set--left gutter--horizontal">
+                  <h3>Episode 1</h3>
+                  <img style="max-width: 100%" src="http://placehold.it/1280x720">
+                  <p>There now is your insular city of the Manhattoes, belted round by wharves as Indian isles by coral reefs—commerce surrounds it with her surf. Right and left, the streets take you waterward. Its extreme downtown is the battery, where that noble mole is washed by waves, and cooled by breezes, which a few hours previous were out of sight of land. Look at the crowds of water-gazers there.</p>
+                </div>
       </div>
       <div class="gutter--vertical-2x">
         <div class="column--1x set--center">
@@ -308,12 +375,77 @@
   </article>
 </main>
 
+		<!-- Root element of PhotoSwipe. Must have class pswp. -->
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	
+	    <!-- Background of PhotoSwipe.
+	         It's a separate element, as animating opacity is faster than rgba(). -->
+	    <div class="pswp__bg"></div>
+	
+	    <!-- Slides wrapper with overflow:hidden. -->
+	    <div class="pswp__scroll-wrap">
+	
+	        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+	        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+	        <div class="pswp__container">
+	            <div class="pswp__item"></div>
+	            <div class="pswp__item"></div>
+	            <div class="pswp__item"></div>
+	        </div>
+	
+	        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+	        <div class="pswp__ui pswp__ui--hidden">
+	
+	            <div class="pswp__top-bar">
+	
+	                <!--  Controls are self-explanatory. Order can be changed. -->
+	
+	                <div class="pswp__counter"></div>
+	
+	                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+	
+	                <button class="pswp__button pswp__button--share" title="Share"></button>
+	
+	                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+	
+	                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+	
+	                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+	                <!-- element will get class pswp__preloader--active when preloader is running -->
+	                <div class="pswp__preloader">
+	                    <div class="pswp__preloader__icn">
+	                      <div class="pswp__preloader__cut">
+	                        <div class="pswp__preloader__donut"></div>
+	                      </div>
+	                    </div>
+	                </div>
+	            </div>
+	
+	            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+	                <div class="pswp__share-tooltip"></div>
+	            </div>
+	
+	            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+	            </button>
+	
+	            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+	            </button>
+	
+	            <div class="pswp__caption">
+	                <div class="pswp__caption__center"></div>
+	            </div>
+	
+	          </div>
+	
+	        </div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/1.4.0/lazysizes.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
 	<script src="http://vjs.zencdn.net/5.6.0/video.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.0.8/Youtube.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
 
 
 	<!-- toolkit scripts -->
