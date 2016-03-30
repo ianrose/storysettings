@@ -152,6 +152,7 @@ $(document).ready(function(){
   }, {
     offset: 'bottom-in-view'
   });
+  
   transition.init();
-   zoom.init();
+  zoom.init();
 });
