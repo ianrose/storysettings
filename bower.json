@@ -1,5 +1,5 @@
 {
-  "name": "Storysettings",
+  "name": "storysettings",
   "description": "A tool for building stories on the web",
   "main": [
     "./dist/assets/storysettings/styles/toolkit.css",
