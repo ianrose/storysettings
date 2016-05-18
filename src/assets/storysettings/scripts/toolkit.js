@@ -33,7 +33,7 @@ function debounce(func, wait, immediate) {
 $(document).ready(function(){
   'use strict';
 
-  var $article = $('[data-sset="article"]');
+  var $article = $('[data-sset="story"]');
   var $progress = $('[data-sset="progress"]');
   var $siteHeader = $('[data-sset="site-header"]');
   var scrollToOffset = -56;
@@ -138,7 +138,7 @@ $(document).ready(function(){
   // Waypoints
 
   // Changes header styles when over main art vs article body
-  $('[data-sset="article-body"]').waypoint(function() {
+  $('[data-sset="story-body"]').waypoint(function() {
     $($siteHeader).toggleClass('is-top');
     $('[data-sset="site-title"]').toggleClass('is-hidden');
   }, {
@@ -152,7 +152,7 @@ $(document).ready(function(){
   }, {
     offset: 'bottom-in-view'
   });
-  
+
   transition.init();
   zoom.init();
 });
