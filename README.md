@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://storysettings.surge.sh/assets/toolkit/images/storysettings-logo.svg" width="500">
+  <img src="http://storysettings.surge.sh/assets/storysettings/images/storysettings-logo.svg" width="500">
 </p>
 
 # Storysettings
