@@ -70,7 +70,7 @@ $border-width-normal: $base-vertical-unit !default;
 $border-width-wide: $border-width-normal * 2 !default;
 
 // Breakpoints
-$screen-xs-min: 620px !default;
+$screen-xs-min: 640px !default;
 $screen-sm-min: 740px !default;
 $screen-md-min: 992px !default;
 $screen-lg-min: 1200px !default;
@@ -79,7 +79,7 @@ $screen-sm-max: ($screen-md-min - 1px) !default;
 $screen-md-max: ($screen-lg-min - 1px) !default;
 
 // Layout Settings
-$column-width: 620px !default;
+$column-width: 640px !default;
 $gutter: $base-vertical-unit * 2 !default;
 
 // Site Header

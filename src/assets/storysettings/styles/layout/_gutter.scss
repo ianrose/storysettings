@@ -23,12 +23,17 @@
   padding-right: $gutter * 2;
 }
 
+.gutter--horizontal-half {
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+}
+
 .gutter--vertical {
-  margin-top: emRhythm($base-line-multi);
   margin-bottom: emRhythm($base-line-multi);
+  margin-top: emRhythm($base-line-multi);
 }
 
 .gutter--vertical-2x {
-  margin-top: emRhythm($base-line-multi * 2);
   margin-bottom: emRhythm($base-line-multi * 2);
+  margin-top: emRhythm($base-line-multi * 2);
 }

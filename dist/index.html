@@ -214,21 +214,6 @@
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;!-- Web Font Loader - Fallback for Font family below in &lt;noscript&gt; [*] --&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-WebFontConfig = {
-	google: { families: [ ] }
-};
-(function() {
-	var wf = document.createElement('script');
-	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-	'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-	wf.type = 'text/javascript';
-	wf.async = 'true';
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(wf, s);
-})();
-&lt;/script&gt;
 &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
 &lt;meta name=&quot;description&quot; content=&quot;Description of the page, you could use the dek content.&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
@@ -280,10 +265,6 @@ WebFontConfig = {
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;
 
-&lt;noscript&gt;
-&lt;!-- [*] Web fonts for no-js --&gt;
-&lt;link href='http://' rel='stylesheet' type='text/css'&gt;
-&lt;/noscript&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;header&gt;...&lt;/header&gt;
