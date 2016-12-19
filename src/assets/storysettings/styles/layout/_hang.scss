@@ -1,3 +1,5 @@
+$hang-lg-bp: ($column-width * 2) + ($gutter * 2);
+
 .hang {
   margin: 0 auto;
   margin-left: $gutter;
@@ -15,12 +17,12 @@
 .hang--left {
   @media (min-width: $screen-xs-min) {
     float: left;
-    margin-left: 5%;
+    margin-left: $gutter;
     margin-right: $gutter;
   }
 
-  @media (min-width: 2000px) {
-    margin-left: 15%;
+  @media (min-width: $hang-lg-bp) {
+    margin-left: calc(50% - #{$column-width});
   }
 }
 
@@ -28,10 +30,10 @@
   @media (min-width: $screen-xs-min) {
     float: right;
     margin-left: $gutter;
-    margin-right: 5%;
+    margin-right: $gutter;
   }
 
-  @media (min-width: 2000px) {
-    margin-right: 15%;
+  @media (min-width: $hang-lg-bp) {
+    margin-right: calc(50% - #{$column-width});
   }
 }
